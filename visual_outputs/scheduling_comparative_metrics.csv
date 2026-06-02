@@ -1,0 +1,6 @@
+algorithm,total_jobs,missed_deadlines,average_waiting_time,average_turnaround_time
+EDF,56,38,101.11,106.25
+RMS,56,32,104.0,109.14
+FCFS,56,40,113.0,118.14
+Round Robin,56,43,126.11,131.25
+Priority,56,37,102.71,107.86

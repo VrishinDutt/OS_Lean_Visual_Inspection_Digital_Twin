@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lean Visual Inspection OS Simulation Preview</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", Arial, sans-serif;
+      background: #111;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 32px;
+    }
+
+    h1 {
+      margin-bottom: 4px;
+      letter-spacing: -0.04em;
+    }
+
+    p {
+      color: #aaa;
+      max-width: 900px;
+      line-height: 1.5;
+    }
+
+    .controls {
+      margin: 24px 0;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    button, select {
+      background: #222;
+      color: #f5f5f5;
+      border: 1px solid #444;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background: #333;
+      cursor: pointer;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(140px, 1fr));
+      gap: 12px;
+      margin: 24px 0;
+      max-width: 1000px;
+    }
+
+    .metric-card {
+      background: #181818;
+      border: 1px solid #333;
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .metric-card small {
+      color: #888;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .metric-card strong {
+      font-size: 24px;
+    }
+
+    .line {
+      margin-top: 24px;
+      background: #1b1b1b;
+      border: 1px solid #333;
+      border-radius: 18px;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stations {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .station {
+      border: 1px solid #444;
+      border-radius: 12px;
+      padding: 12px 8px;
+      text-align: center;
+      background: #181818;
+      min-height: 54px;
+      font-size: 13px;
+      color: #bbb;
+      transition: 0.2s ease;
+    }
+
+    .station.active {
+      border-color: #e5e5e5;
+      background: #2a2a2a;
+      color: #fff;
+      box-shadow: 0 0 18px rgba(255,255,255,0.12);
+    }
+
+    .station.race {
+      border-color: #ff5c5c;
+      background: #351111;
+      color: #ffd4d4;
+      box-shadow: 0 0 24px rgba(255, 80, 80, 0.32);
+    }
+
+    .station.deadline {
+      border-color: #ffd166;
+      background: #332a11;
+      color: #ffe8a3;
+      box-shadow: 0 0 24px rgba(255, 209, 102, 0.28);
+    }
+
+    .conveyor {
+      height: 150px;
+      border-radius: 14px;
+      border: 1px dashed #555;
+      position: relative;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, #222, #151515);
+      background-size: 40px 100%, 100% 100%;
+      overflow: hidden;
+    }
+
+    .product {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: #8d99ae;
+      position: absolute;
+      top: 48px;
+      left: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #111;
+      font-size: 11px;
+      font-weight: 800;
+      transition: left 0.35s ease, background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .product.pass {
+      background: #95d5b2;
+    }
+
+    .product.reject {
+      background: #c77dff;
+      transform: translateY(44px);
+    }
+
+    .product.race {
+      background: #ff5c5c;
+      box-shadow: 0 0 26px rgba(255, 80, 80, 0.9);
+    }
+
+    .product.deadline {
+      background: #ffd166;
+      box-shadow: 0 0 26px rgba(255, 209, 102, 0.8);
+    }
+
+    .event-log {
+      margin-top: 24px;
+      background: #181818;
+      border: 1px solid #333;
+      border-radius: 14px;
+      padding: 16px;
+      height: 260px;
+      overflow-y: auto;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .race-text {
+      color: #ff8a8a;
+    }
+
+    .deadline-text {
+      color: #ffd166;
+    }
+
+    .normal-text {
+      color: #cfcfcf;
+    }
+
+    .scheduled-text {
+      color: #a0c4ff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lean Visual Inspection OS Simulation Preview</h1>
+  <p>
+    This browser preview replays the Python-generated OS simulation events intended for an Unreal Engine digital twin.
+    It visualizes race-condition corruption, synchronized flow, and scheduling/deadline behaviour in an AI-assisted inspection cell.
+  </p>
+
+  <div class="controls">
+    <select id="fileSelect">
+      <option value="../simulation_events/unsafe_mode_events.json">Unsafe Race Condition Mode</option>
+      <option value="../simulation_events/safe_mode_events.json">Safe Synchronized Mode</option>
+      <option value="../simulation_events/edf_schedule.json">EDF Scheduling Mode</option>
+      <option value="../simulation_events/fcfs_schedule.json">FCFS Scheduling Mode</option>
+      <option value="../simulation_events/round_robin_schedule.json">Round Robin Scheduling Mode</option>
+      <option value="../simulation_events/priority_schedule.json">Priority Scheduling Mode</option>
+      <option value="../simulation_events/rms_schedule.json">RMS Scheduling Mode</option>
+    </select>
+    <button onclick="loadAndPlay()">Play</button>
+    <button onclick="resetScene()">Reset</button>
+  </div>
+
+  <div class="metrics">
+    <div class="metric-card">
+      <small>Mode</small>
+      <strong id="modeMetric">—</strong>
+    </div>
+    <div class="metric-card">
+      <small>Events Played</small>
+      <strong id="eventsMetric">0</strong>
+    </div>
+    <div class="metric-card">
+      <small>Race Events</small>
+      <strong id="raceMetric">0</strong>
+    </div>
+    <div class="metric-card">
+      <small>Deadline Misses</small>
+      <strong id="deadlineMetric">0</strong>
+    </div>
+  </div>
+
+  <div class="line">
+    <div class="stations">
+      <div class="station" id="sensor">Sensor</div>
+      <div class="station" id="camera">Camera</div>
+      <div class="station" id="ai_inspection">AI Inspection</div>
+      <div class="station" id="rule_inspection">Rule Check</div>
+      <div class="station" id="decision_fusion">Decision Fusion</div>
+      <div class="station" id="actuator">Actuator</div>
+      <div class="station" id="logger">Logger</div>
+    </div>
+
+    <div class="conveyor" id="conveyor"></div>
+  </div>
+
+  <div class="event-log" id="eventLog"></div>
+
+  <script>
+    const stationPositions = {
+      sensor: 4,
+      camera: 20,
+      ai_inspection: 36,
+      rule_inspection: 48,
+      decision_fusion: 62,
+      actuator: 78,
+      logger: 92
+    };
+
+    const eventToStation = {
+      sensor_detected: "sensor",
+      camera_frame_attached: "camera",
+      inspection_complete: "ai_inspection",
+      decision_fused: "decision_fusion",
+      actuator_reject: "actuator",
+      actuator_pass: "actuator"
+    };
+
+    let products = {};
+    let timers = [];
+    let playedEvents = 0;
+    let raceEvents = 0;
+    let deadlineEvents = 0;
+
+    function resetScene() {
+      timers.forEach(clearTimeout);
+      timers = [];
+      products = {};
+      playedEvents = 0;
+      raceEvents = 0;
+      deadlineEvents = 0;
+
+      document.getElementById("conveyor").innerHTML = "";
+      document.getElementById("eventLog").innerHTML = "";
+      document.getElementById("modeMetric").textContent = "—";
+      document.getElementById("eventsMetric").textContent = "0";
+      document.getElementById("raceMetric").textContent = "0";
+      document.getElementById("deadlineMetric").textContent = "0";
+
+      document.querySelectorAll(".station").forEach(station => {
+        station.classList.remove("active", "race", "deadline");
+      });
+    }
+
+    function updateMetrics(event) {
+      playedEvents += 1;
+
+      if (event.status === "race") {
+        raceEvents += 1;
+      }
+
+      if (event.status === "deadline_missed") {
+        deadlineEvents += 1;
+      }
+
+      document.getElementById("modeMetric").textContent = event.mode.toUpperCase();
+      document.getElementById("eventsMetric").textContent = playedEvents;
+      document.getElementById("raceMetric").textContent = raceEvents;
+      document.getElementById("deadlineMetric").textContent = deadlineEvents;
+    }
+
+    function getProduct(productId) {
+      if (products[productId]) return products[productId];
+
+      const product = document.createElement("div");
+      product.className = "product";
+      product.textContent = productId;
+      document.getElementById("conveyor").appendChild(product);
+      products[productId] = product;
+      return product;
+    }
+
+    function clearStations() {
+      document.querySelectorAll(".station").forEach(station => {
+        station.classList.remove("active", "race", "deadline");
+      });
+    }
+
+    function moveProduct(productId, stationName, status, eventName) {
+      const product = getProduct(productId);
+      const left = stationPositions[stationName] || 5;
+      product.style.left = `${left}%`;
+
+      product.classList.remove("race", "pass", "reject", "deadline");
+
+      if (status === "race") {
+        product.classList.add("race");
+      }
+
+      if (status === "deadline_missed") {
+        product.classList.add("deadline");
+      }
+
+      if (eventName === "actuator_pass" || eventName.includes("actuator_completed")) {
+        product.classList.add("pass");
+      }
+
+      if (eventName === "actuator_reject") {
+        product.classList.add("reject");
+      }
+    }
+
+    function activateStation(stationName, status) {
+      clearStations();
+
+      const station = document.getElementById(stationName);
+      if (!station) return;
+
+      if (status === "race") {
+        station.classList.add("race");
+      } else if (status === "deadline_missed") {
+        station.classList.add("deadline");
+      } else {
+        station.classList.add("active");
+      }
+    }
+
+    function normalizeEvents(data) {
+      if (data.events) return data.events;
+      return data;
+    }
+
+    function inferStation(eventName) {
+      if (eventToStation[eventName]) return eventToStation[eventName];
+
+      for (const station of Object.keys(stationPositions)) {
+        if (eventName.includes(station)) {
+          return station;
+        }
+      }
+
+      if (eventName.includes("race_condition")) return "ai_inspection";
+      if (eventName.includes("camera")) return "camera";
+      if (eventName.includes("rule")) return "rule_inspection";
+      if (eventName.includes("decision")) return "decision_fusion";
+      if (eventName.includes("actuator")) return "actuator";
+      if (eventName.includes("logger")) return "logger";
+
+      return "sensor";
+    }
+
+    function logEvent(event) {
+      const log = document.getElementById("eventLog");
+      const row = document.createElement("div");
+
+      let cls = "normal-text";
+      if (event.status === "race") cls = "race-text";
+      if (event.status === "deadline_missed") cls = "deadline-text";
+      if (event.status === "scheduled") cls = "scheduled-text";
+
+      row.className = cls;
+      row.textContent = `[t=${event.time}] ${event.mode.toUpperCase()} | ${event.product_id} | ${event.event} | ${event.status}`;
+      log.appendChild(row);
+      log.scrollTop = log.scrollHeight;
+    }
+
+    async function loadAndPlay() {
+      resetScene();
+
+      const file = document.getElementById("fileSelect").value;
+      const response = await fetch(file);
+      const data = await response.json();
+      const events = normalizeEvents(data).sort((a, b) => a.time - b.time);
+
+      const baseTime = events.length ? events[0].time : 0;
+
+      events.forEach(event => {
+        const delay = Math.max(0, (event.time - baseTime) * 120);
+
+        const timer = setTimeout(() => {
+          const stationName = inferStation(event.event);
+          activateStation(stationName, event.status);
+          moveProduct(event.product_id, stationName, event.status, event.event);
+          logEvent(event);
+          updateMetrics(event);
+        }, delay);
+
+        timers.push(timer);
+      });
+    }
+  </script>
+</body>
+</html>
