@@ -1,0 +1,1392 @@
+{
+  "mode": "safe",
+  "products": [
+    {
+      "product_id": "P001",
+      "is_defective": false,
+      "frame_id": "FRAME_P001",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P002",
+      "is_defective": false,
+      "frame_id": "FRAME_P002",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P003",
+      "is_defective": false,
+      "frame_id": "FRAME_P003",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P004",
+      "is_defective": false,
+      "frame_id": "FRAME_P004",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P005",
+      "is_defective": true,
+      "frame_id": "FRAME_P005",
+      "ai_result": "defective",
+      "rule_result": "fail",
+      "final_decision": "reject",
+      "rejected_product_id": "P005",
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P006",
+      "is_defective": false,
+      "frame_id": "FRAME_P006",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P007",
+      "is_defective": false,
+      "frame_id": "FRAME_P007",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P008",
+      "is_defective": false,
+      "frame_id": "FRAME_P008",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P009",
+      "is_defective": false,
+      "frame_id": "FRAME_P009",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P010",
+      "is_defective": false,
+      "frame_id": "FRAME_P010",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P011",
+      "is_defective": true,
+      "frame_id": "FRAME_P011",
+      "ai_result": "defective",
+      "rule_result": "fail",
+      "final_decision": "reject",
+      "rejected_product_id": "P011",
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P012",
+      "is_defective": false,
+      "frame_id": "FRAME_P012",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P013",
+      "is_defective": false,
+      "frame_id": "FRAME_P013",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P014",
+      "is_defective": false,
+      "frame_id": "FRAME_P014",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P015",
+      "is_defective": false,
+      "frame_id": "FRAME_P015",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P016",
+      "is_defective": false,
+      "frame_id": "FRAME_P016",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P017",
+      "is_defective": true,
+      "frame_id": "FRAME_P017",
+      "ai_result": "defective",
+      "rule_result": "fail",
+      "final_decision": "reject",
+      "rejected_product_id": "P017",
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P018",
+      "is_defective": false,
+      "frame_id": "FRAME_P018",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P019",
+      "is_defective": false,
+      "frame_id": "FRAME_P019",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P020",
+      "is_defective": false,
+      "frame_id": "FRAME_P020",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P021",
+      "is_defective": false,
+      "frame_id": "FRAME_P021",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P022",
+      "is_defective": false,
+      "frame_id": "FRAME_P022",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P023",
+      "is_defective": true,
+      "frame_id": "FRAME_P023",
+      "ai_result": "defective",
+      "rule_result": "fail",
+      "final_decision": "reject",
+      "rejected_product_id": "P023",
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P024",
+      "is_defective": false,
+      "frame_id": "FRAME_P024",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P025",
+      "is_defective": false,
+      "frame_id": "FRAME_P025",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P026",
+      "is_defective": false,
+      "frame_id": "FRAME_P026",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P027",
+      "is_defective": false,
+      "frame_id": "FRAME_P027",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P028",
+      "is_defective": false,
+      "frame_id": "FRAME_P028",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P029",
+      "is_defective": true,
+      "frame_id": "FRAME_P029",
+      "ai_result": "defective",
+      "rule_result": "fail",
+      "final_decision": "reject",
+      "rejected_product_id": "P029",
+      "race_condition": false,
+      "deadline_missed": false
+    },
+    {
+      "product_id": "P030",
+      "is_defective": false,
+      "frame_id": "FRAME_P030",
+      "ai_result": "normal",
+      "rule_result": "pass",
+      "final_decision": "pass",
+      "rejected_product_id": null,
+      "race_condition": false,
+      "deadline_missed": false
+    }
+  ],
+  "events": [
+    {
+      "time": 0,
+      "product_id": "P001",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 1,
+      "product_id": "P002",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 2,
+      "product_id": "P003",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 3,
+      "product_id": "P004",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 4,
+      "product_id": "P005",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 5,
+      "product_id": "P006",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 6,
+      "product_id": "P007",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 7,
+      "product_id": "P008",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 8,
+      "product_id": "P009",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 9,
+      "product_id": "P010",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 10,
+      "product_id": "P011",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 11,
+      "product_id": "P012",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 12,
+      "product_id": "P013",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 13,
+      "product_id": "P014",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 14,
+      "product_id": "P015",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 15,
+      "product_id": "P016",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 16,
+      "product_id": "P017",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 17,
+      "product_id": "P018",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 18,
+      "product_id": "P019",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 19,
+      "product_id": "P020",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 20,
+      "product_id": "P021",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 21,
+      "product_id": "P022",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 22,
+      "product_id": "P023",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 23,
+      "product_id": "P024",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 24,
+      "product_id": "P025",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 25,
+      "product_id": "P026",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 26,
+      "product_id": "P027",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 27,
+      "product_id": "P028",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 28,
+      "product_id": "P029",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 29,
+      "product_id": "P030",
+      "event": "sensor_detected",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 30,
+      "product_id": "P001",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 31,
+      "product_id": "P002",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 32,
+      "product_id": "P003",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 33,
+      "product_id": "P004",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 34,
+      "product_id": "P005",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 35,
+      "product_id": "P006",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 36,
+      "product_id": "P007",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 37,
+      "product_id": "P008",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 38,
+      "product_id": "P009",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 39,
+      "product_id": "P010",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 40,
+      "product_id": "P011",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 41,
+      "product_id": "P012",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 42,
+      "product_id": "P013",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 43,
+      "product_id": "P014",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 44,
+      "product_id": "P015",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 45,
+      "product_id": "P016",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 46,
+      "product_id": "P017",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 47,
+      "product_id": "P018",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 48,
+      "product_id": "P019",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 49,
+      "product_id": "P020",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 50,
+      "product_id": "P021",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 51,
+      "product_id": "P022",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 52,
+      "product_id": "P023",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 53,
+      "product_id": "P024",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 54,
+      "product_id": "P025",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 55,
+      "product_id": "P026",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 56,
+      "product_id": "P027",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 57,
+      "product_id": "P028",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 58,
+      "product_id": "P029",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 59,
+      "product_id": "P030",
+      "event": "camera_frame_attached",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 60,
+      "product_id": "P001",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 61,
+      "product_id": "P002",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 62,
+      "product_id": "P003",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 63,
+      "product_id": "P004",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 64,
+      "product_id": "P005",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 65,
+      "product_id": "P006",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 66,
+      "product_id": "P007",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 67,
+      "product_id": "P008",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 68,
+      "product_id": "P009",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 69,
+      "product_id": "P010",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 70,
+      "product_id": "P011",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 71,
+      "product_id": "P012",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 72,
+      "product_id": "P013",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 73,
+      "product_id": "P014",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 74,
+      "product_id": "P015",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 75,
+      "product_id": "P016",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 76,
+      "product_id": "P017",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 77,
+      "product_id": "P018",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 78,
+      "product_id": "P019",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 79,
+      "product_id": "P020",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 80,
+      "product_id": "P021",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 81,
+      "product_id": "P022",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 82,
+      "product_id": "P023",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 83,
+      "product_id": "P024",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 84,
+      "product_id": "P025",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 85,
+      "product_id": "P026",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 86,
+      "product_id": "P027",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 87,
+      "product_id": "P028",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 88,
+      "product_id": "P029",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 89,
+      "product_id": "P030",
+      "event": "inspection_complete",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 90,
+      "product_id": "P001",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 91,
+      "product_id": "P002",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 92,
+      "product_id": "P003",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 93,
+      "product_id": "P004",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 94,
+      "product_id": "P005",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 95,
+      "product_id": "P006",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 96,
+      "product_id": "P007",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 97,
+      "product_id": "P008",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 98,
+      "product_id": "P009",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 99,
+      "product_id": "P010",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 100,
+      "product_id": "P011",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 101,
+      "product_id": "P012",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 102,
+      "product_id": "P013",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 103,
+      "product_id": "P014",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 104,
+      "product_id": "P015",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 105,
+      "product_id": "P016",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 106,
+      "product_id": "P017",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 107,
+      "product_id": "P018",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 108,
+      "product_id": "P019",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 109,
+      "product_id": "P020",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 110,
+      "product_id": "P021",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 111,
+      "product_id": "P022",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 112,
+      "product_id": "P023",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 113,
+      "product_id": "P024",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 114,
+      "product_id": "P025",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 115,
+      "product_id": "P026",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 116,
+      "product_id": "P027",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 117,
+      "product_id": "P028",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 118,
+      "product_id": "P029",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 119,
+      "product_id": "P030",
+      "event": "decision_fused",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 120,
+      "product_id": "P001",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 121,
+      "product_id": "P002",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 122,
+      "product_id": "P003",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 123,
+      "product_id": "P004",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 124,
+      "product_id": "P005",
+      "event": "actuator_reject",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 125,
+      "product_id": "P006",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 126,
+      "product_id": "P007",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 127,
+      "product_id": "P008",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 128,
+      "product_id": "P009",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 129,
+      "product_id": "P010",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 130,
+      "product_id": "P011",
+      "event": "actuator_reject",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 131,
+      "product_id": "P012",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 132,
+      "product_id": "P013",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 133,
+      "product_id": "P014",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 134,
+      "product_id": "P015",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 135,
+      "product_id": "P016",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 136,
+      "product_id": "P017",
+      "event": "actuator_reject",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 137,
+      "product_id": "P018",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 138,
+      "product_id": "P019",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 139,
+      "product_id": "P020",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 140,
+      "product_id": "P021",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 141,
+      "product_id": "P022",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 142,
+      "product_id": "P023",
+      "event": "actuator_reject",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 143,
+      "product_id": "P024",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 144,
+      "product_id": "P025",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 145,
+      "product_id": "P026",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 146,
+      "product_id": "P027",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 147,
+      "product_id": "P028",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 148,
+      "product_id": "P029",
+      "event": "actuator_reject",
+      "mode": "safe",
+      "status": "normal"
+    },
+    {
+      "time": 149,
+      "product_id": "P030",
+      "event": "actuator_pass",
+      "mode": "safe",
+      "status": "normal"
+    }
+  ],
+  "metrics": {
+    "total_products": 30,
+    "race_conditions": 0,
+    "defective_products": 5
+  }
+}

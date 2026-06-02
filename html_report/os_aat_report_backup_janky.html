@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OS Reliability in AI-Assisted Lean Visual Inspection</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 18mm 16mm 18mm 16mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #e8e8e8;
+      color: #1f2933;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.55;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto 18px auto;
+      padding: 22mm 18mm 18mm 18mm;
+      background: #fff;
+      position: relative;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+      page-break-after: always;
+    }
+
+    .page:last-child {
+      page-break-after: auto;
+    }
+
+    .topline {
+      position: absolute;
+      top: 14mm;
+      left: 18mm;
+      right: 18mm;
+      border-top: 1px solid #d5dde5;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 10mm;
+      left: 18mm;
+      right: 18mm;
+      display: flex;
+      justify-content: space-between;
+      color: #7b8794;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 11px;
+      border-top: 1px solid #d5dde5;
+      padding-top: 7px;
+    }
+
+    .kicker {
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #6b7280;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    h1, h2, h3 {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #2f343a;
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: 38px;
+      letter-spacing: -0.04em;
+      margin: 8px 0 18px 0;
+    }
+
+    h2 {
+      font-size: 29px;
+      margin: 0 0 14px 0;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #d5dde5;
+    }
+
+    h3 {
+      font-size: 18px;
+      color: #3b4652;
+      margin: 22px 0 8px 0;
+    }
+
+    p {
+      font-size: 15.5px;
+      margin: 0 0 12px 0;
+      text-align: justify;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .college-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 30px;
+      letter-spacing: 0.1em;
+      font-weight: 800;
+      text-align: center;
+      margin-top: 10mm;
+    }
+
+    .college-subtitle {
+      text-align: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #555;
+      margin-top: 6px;
+      font-size: 14px;
+    }
+
+    .department {
+      text-align: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      margin-top: 22px;
+    }
+
+    .course-box {
+      margin: 26px 0;
+      padding: 18px;
+      border: 1px solid #d5dde5;
+      background: #f4f8fb;
+      text-align: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: 0.05em;
+    }
+
+    .main-title {
+      text-align: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 36px;
+      line-height: 1.12;
+      letter-spacing: -0.04em;
+      font-weight: 900;
+      margin-top: 32px;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #5f6c78;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 15px;
+      max-width: 620px;
+      margin: 18px auto 28px auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0 18px 0;
+      font-size: 14px;
+    }
+
+    th {
+      background: #eef3f7;
+      color: #2f343a;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 700;
+      text-align: left;
+    }
+
+    th, td {
+      border: 1px solid #d5dde5;
+      padding: 9px 10px;
+      vertical-align: top;
+    }
+
+    .meta-table td:first-child,
+    .student-table th,
+    .student-table td:first-child {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 700;
+    }
+
+    .callout {
+      background: #f4f8fb;
+      border: 1px solid #d5dde5;
+      border-left: 5px solid #9cc9e5;
+      padding: 13px 15px;
+      margin: 16px 0;
+      font-size: 15px;
+    }
+
+    .figure {
+      border: 1px solid #d5dde5;
+      background: #fbfcfd;
+      padding: 14px;
+      margin: 16px 0;
+    }
+
+    .figure-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 800;
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .box {
+      border: 1px solid #cfd8e3;
+      background: white;
+      padding: 10px 14px;
+      min-width: 100px;
+      text-align: center;
+    }
+
+    .arrow {
+      color: #7b8794;
+      font-weight: 700;
+    }
+
+    pre {
+      background: #f3f6f9;
+      border: 1px solid #d5dde5;
+      padding: 14px;
+      overflow: hidden;
+      font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+      font-size: 12.5px;
+      line-height: 1.45;
+      white-space: pre-wrap;
+    }
+
+    ul {
+      margin-top: 6px;
+    }
+
+    li {
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 8px auto;
+      border: 1px solid #d5dde5;
+    }
+
+    .toc td {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 14px;
+    }
+
+    .toc td:last-child {
+      text-align: right;
+      font-weight: 700;
+    }
+
+    .small {
+      font-size: 13px;
+      color: #59636e;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .no-border {
+      border: none;
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      .page {
+        margin: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section class="page">
+  <div class="college-title">B.M.S COLLEGE OF ENGINEERING</div>
+  <div class="college-subtitle">(An Autonomous Institution Affiliated to VTU, Belagavi)</div>
+  <div class="college-subtitle">Post Box No. 1908, Bull Temple Road, Bengaluru – 560 019</div>
+
+  <div class="department">DEPARTMENT OF ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING</div>
+  <div class="college-subtitle">Academic Year: 2025–2026</div>
+
+  <div class="course-box">
+    OPERATING SYSTEMS<br>
+    24AM4PCOPS · Alternative Assessment Tool — Project Report
+  </div>
+
+  <div class="main-title">
+    OS Reliability in AI-Assisted Lean Visual Inspection
+  </div>
+
+  <div class="subtitle">
+    Race conditions and real-time scheduling in a smart manufacturing cell inspired by lean manufacturing, AI-assisted visual inspection, and MELSOFT VIXIO-style industrial workflows.
+  </div>
+
+  <h3 class="center">Submitted By</h3>
+
+  <table class="student-table">
+    <tr>
+      <th>Sl. No.</th>
+      <th>Student Name</th>
+      <th>USN</th>
+    </tr>
+    <tr><td>1</td><td>Yashwanth J</td><td>1BM24AI196</td></tr>
+    <tr><td>2</td><td>Vrishin Dutt CG</td><td>1BM24AI195</td></tr>
+  </table>
+
+  <table class="meta-table">
+    <tr>
+      <td>Semester</td><td>Semester 4</td>
+      <td>Year</td><td>2nd Year</td>
+    </tr>
+    <tr>
+      <td>Programme</td><td colspan="3">B.E. Artificial Intelligence and Machine Learning</td>
+    </tr>
+    <tr>
+      <td>Faculty In-Charge</td><td></td>
+      <td>Total Pages</td><td>22</td>
+    </tr>
+    <tr>
+      <td>Faculty Signature with Date</td><td></td>
+      <td>Score</td><td></td>
+    </tr>
+    <tr>
+      <td>Remarks</td><td colspan="3"></td>
+    </tr>
+  </table>
+
+  <div class="footer">
+    <span>Dept. of AIML, BMSCE</span>
+    <span>Page 1</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">Abstract</div>
+  <h2>OS Reliability in AI-Assisted Lean Visual Inspection</h2>
+
+  <p>
+    This report presents an Operating Systems project based on race conditions and scheduling algorithms in the context of an AI-assisted lean visual-inspection cell. Instead of using a generic race-condition example such as a bank account or ticket booking system, the project models a smart manufacturing workflow where products move through a conveyor, sensor gate, camera station, AI inspection module, rule-based inspection module, decision-fusion stage, actuator, and logger.
+  </p>
+
+  <p>
+    The main race condition studied is product-inspection mapping corruption. In the unsafe model, a global shared variable called <b>current_product_id</b> is updated by the sensor task while the AI inspection task may still be processing a previous product. This can cause the inspection result of one product to be written under another product ID. In an industrial setting, such a race condition can become a quality-control failure because a defective product may pass or a non-defective product may be rejected.
+  </p>
+
+  <p>
+    The project implements two race-condition modes: an unsafe shared-state model and a safe synchronized pipeline. The safe model uses product packets and queue discipline to preserve product identity through the entire pipeline. The scheduling component compares First Come First Serve, Round Robin, Priority Scheduling, Rate Monotonic Scheduling, and Earliest Deadline First. The simulation generates JSON and CSV event timelines, browser-based replay, comparative charts, and Unreal Engine handoff files for future digital-twin visualization.
+  </p>
+
+  <div class="callout">
+    <b>Topic alignment:</b> The project demonstrates race conditions, critical sections, mutual exclusion, producer-consumer flow, shared-buffer protection, real-time scheduling, deadline misses, and comparative scheduling analysis using a product-centric industrial case study.
+  </div>
+
+  <div class="footer">
+    <span>OS Reliability in AI-Assisted Lean Visual Inspection</span>
+    <span>Page 2</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">Index</div>
+  <h2>Table of Contents</h2>
+
+  <table class="toc">
+    <tr><th>Topic</th><th>Page</th></tr>
+    <tr><td>Title Page</td><td>1</td></tr>
+    <tr><td>Abstract</td><td>2</td></tr>
+    <tr><td>Table of Contents</td><td>3</td></tr>
+    <tr><td>Introduction</td><td>4</td></tr>
+    <tr><td>Origin of the Idea</td><td>5</td></tr>
+    <tr><td>Problem Description and Motivation</td><td>6</td></tr>
+    <tr><td>Case Study: Lean Visual Inspection Cell</td><td>7</td></tr>
+    <tr><td>Operating System Concepts Used</td><td>8</td></tr>
+    <tr><td>Race Condition Model</td><td>9</td></tr>
+    <tr><td>Unsafe Shared-State Simulation</td><td>10</td></tr>
+    <tr><td>Safe Synchronized Pipeline</td><td>11</td></tr>
+    <tr><td>Scheduling Problem in the Inspection Cell</td><td>12</td></tr>
+    <tr><td>Scheduling Algorithms</td><td>13</td></tr>
+    <tr><td>Implementation Details and Code Snippets</td><td>14</td></tr>
+    <tr><td>Simulation Outputs</td><td>15</td></tr>
+    <tr><td>Comparative Analysis</td><td>16</td></tr>
+    <tr><td>Unreal Engine Digital-Twin Handoff</td><td>17</td></tr>
+    <tr><td>Results and Discussion</td><td>18</td></tr>
+    <tr><td>Limitations and Future Scope</td><td>19</td></tr>
+    <tr><td>Conclusion</td><td>20</td></tr>
+    <tr><td>References</td><td>21</td></tr>
+    <tr><td>GitHub and Demo Notes</td><td>22</td></tr>
+  </table>
+
+  <div class="footer">
+    <span>OS Reliability in AI-Assisted Lean Visual Inspection</span>
+    <span>Page 3</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">Introduction</div>
+  <h2>Introduction</h2>
+
+  <p>
+    Modern manufacturing systems increasingly depend on automation, machine vision, software control, and AI-assisted inspection. In a lean manufacturing environment, the goal is to reduce waste, rework, waiting time, manual burden, and process variation. However, as visual inspection becomes automated, reliability shifts from human judgement alone to the coordination of software tasks.
+  </p>
+
+  <p>
+    A smart inspection cell does not perform one action at a time. It senses product arrival, captures images, runs AI inference, applies rule-based checks, decides whether a product should pass or be rejected, actuates a rejection mechanism, and records the result. These operations may execute concurrently. When concurrent tasks access shared variables or buffers without synchronization, the final output can depend on timing rather than logic. This is known as a race condition.
+  </p>
+
+  <div class="figure">
+    <div class="figure-title">Figure 1. Inspection Cell as an Operating-System Problem</div>
+    <div class="flow">
+      <div class="box">Sensor</div><div class="arrow">»</div>
+      <div class="box">Camera</div><div class="arrow">»</div>
+      <div class="box">AI Inspection</div><div class="arrow">»</div>
+      <div class="box">Decision</div><div class="arrow">»</div>
+      <div class="box">Actuator</div>
+    </div>
+    <p class="small center">Each stage behaves like a concurrent OS task that may access shared product state.</p>
+  </div>
+
+  <div class="callout">
+    <b>Key idea:</b> In an automated inspection cell, race conditions are not merely programming errors. They can become quality-control failures.
+  </div>
+
+  <div class="footer">
+    <span>Dept. of AIML, BMSCE</span>
+    <span>Page 4</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">Origin</div>
+  <h2>Origin of the Idea</h2>
+
+  <p>
+    The idea emerged from connecting Operating Systems theory with a practical industrial workflow. Race conditions are usually demonstrated using simplified examples such as two threads updating a counter. While such examples are useful, they do not show why concurrency errors matter in physical systems.
+  </p>
+
+  <p>
+    In a visual-inspection line, a small software timing error can cause a real product-level failure. For example, if the AI result of Product P017 is incorrectly stored under Product P030, the actuator may reject the wrong product or allow the defective product to continue. This connects OS concepts to lean manufacturing, inspection quality, and real-time process control.
+  </p>
+
+  <table>
+    <tr>
+      <th>Generic OS Example</th>
+      <th>Project Interpretation</th>
+    </tr>
+    <tr>
+      <td>Two threads update a shared counter.</td>
+      <td>Sensor and AI threads update/read shared product identity.</td>
+    </tr>
+    <tr>
+      <td>Incorrect final value occurs.</td>
+      <td>Inspection result is mapped to the wrong product.</td>
+    </tr>
+    <tr>
+      <td>Bug remains inside software.</td>
+      <td>Bug becomes a quality-control failure in a physical inspection line.</td>
+    </tr>
+  </table>
+
+  <div class="figure">
+    <div class="figure-title">Figure 2. From Race Condition to Quality Failure</div>
+    <div class="flow">
+      <div class="box">Shared State</div><div class="arrow">»</div>
+      <div class="box">Timing Conflict</div><div class="arrow">»</div>
+      <div class="box">Wrong Mapping</div><div class="arrow">»</div>
+      <div class="box">Wrong Actuation</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>OS Reliability in AI-Assisted Lean Visual Inspection</span>
+    <span>Page 5</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">Problem Description</div>
+  <h2>Problem Description and Motivation</h2>
+
+  <p>
+    The project studies a conveyor-based visual-inspection workflow where multiple software tasks execute concurrently. Each product must be detected, imaged, inspected, classified, and either passed or rejected before it crosses the actuator point. This creates both a synchronization problem and a scheduling problem.
+  </p>
+
+  <div class="callout">
+    <b>Problem Statement:</b> How can race conditions corrupt product-inspection mapping in an AI-assisted visual-inspection cell, and how can synchronization and real-time scheduling improve the reliability of the system?
+  </div>
+
+  <h3>Project Requirements</h3>
+
+  <table>
+    <tr><th>Requirement</th><th>Design Response</th></tr>
+    <tr>
+      <td>Demonstrate race condition</td>
+      <td>Unsafe shared-state model using a global current_product_id variable.</td>
+    </tr>
+    <tr>
+      <td>Demonstrate synchronization</td>
+      <td>Safe ProductPacket pipeline using queues.</td>
+    </tr>
+    <tr>
+      <td>Demonstrate scheduling algorithm</td>
+      <td>EDF, RMS, FCFS, Round Robin, and Priority Scheduling comparison.</td>
+    </tr>
+    <tr>
+      <td>Use simulation software</td>
+      <td>Browser replay and Unreal Engine event handoff through JSON/CSV.</td>
+    </tr>
+    <tr>
+      <td>Connect to real product context</td>
+      <td>Lean visual inspection and MELSOFT VIXIO-inspired workflow abstraction.</td>
+    </tr>
+  </table>
+
+  <div class="footer">
+    <span>Dept. of AIML, BMSCE</span>
+    <span>Page 6</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">Case Study</div>
+  <h2>Lean Visual Inspection Cell</h2>
+
+  <p>
+    The case study is a smart manufacturing cell where products move through a conveyor and are inspected using a combination of camera input, AI inference, rule-based checking, and actuator control. The design is inspired by industrial AI visual-inspection workflows, including MELSOFT VIXIO-style systems, but the project does not directly clone or integrate the commercial product. It abstracts the operating-system reliability layer underneath such workflows.
+  </p>
+
+  <table>
+    <tr><th>Manufacturing Component</th><th>OS Abstraction</th></tr>
+    <tr><td>Presence sensor</td><td>Event producer or interrupt-like task</td></tr>
+    <tr><td>Camera</td><td>Producer thread that attaches frame data</td></tr>
+    <tr><td>AI inspection module</td><td>CPU-bound task</td></tr>
+    <tr><td>Rule-based inspection</td><td>Deterministic checking task</td></tr>
+    <tr><td>Decision fusion</td><td>Consumer of AI and rule outputs</td></tr>
+    <tr><td>Actuator</td><td>Deadline-sensitive output task</td></tr>
+    <tr><td>Logger</td><td>I/O-bound task</td></tr>
+  </table>
+
+  <div class="figure">
+    <div class="figure-title">Figure 3. Product Flow in the Inspection Cell</div>
+    <div class="flow">
+      <div class="box">Entry</div><div class="arrow">»</div>
+      <div class="box">Sensor</div><div class="arrow">»</div>
+      <div class="box">Camera</div><div class="arrow">»</div>
+      <div class="box">Inspection</div><div class="arrow">»</div>
+      <div class="box">Actuator</div><div class="arrow">»</div>
+      <div class="box">Exit</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>OS Reliability in AI-Assisted Lean Visual Inspection</span>
+    <span>Page 7</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">OS Concepts</div>
+  <h2>Operating System Concepts Used</h2>
+
+  <p>
+    The project maps the manufacturing case study to core Operating Systems concepts. The race-condition part focuses on concurrent access to shared state, while the scheduling part focuses on task ordering under deadline constraints.
+  </p>
+
+  <table>
+    <tr><th>OS Concept</th><th>Project Usage</th></tr>
+    <tr><td>Thread</td><td>Sensor, AI inspection, actuator, and logger tasks are treated as concurrent tasks.</td></tr>
+    <tr><td>Shared Resource</td><td>Product ID, frame ID, inspection result, and actuator command.</td></tr>
+    <tr><td>Race Condition</td><td>Inspection result can be mapped to the wrong product.</td></tr>
+    <tr><td>Critical Section</td><td>Product identity and inspection-result writing must be protected.</td></tr>
+    <tr><td>Mutual Exclusion</td><td>Used conceptually to prevent unsafe shared-state updates.</td></tr>
+    <tr><td>Producer-Consumer</td><td>Sensor/camera produce product packets; inspection/actuator consume them.</td></tr>
+    <tr><td>Scheduling</td><td>Tasks are ordered using FCFS, RR, Priority, RMS, and EDF.</td></tr>
+    <tr><td>Deadline Miss</td><td>A job finishes after the product should have been processed.</td></tr>
+  </table>
+
+  <div class="callout">
+    <b>Central OS connection:</b> Correctness depends not only on individual functions but also on how concurrent tasks interleave and how time-critical tasks are scheduled.
+  </div>
+
+  <div class="footer">
+    <span>Dept. of AIML, BMSCE</span>
+    <span>Page 8</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">Race Condition</div>
+  <h2>Race Condition Model</h2>
+
+  <p>
+    The main race condition is product-inspection mapping corruption. In the unsafe model, a global variable named <b>current_product_id</b> represents the latest product detected by the sensor. The AI inspection task reads this variable while processing product images. If the sensor updates the variable before the AI task writes the result, the result may be stored under the wrong product.
+  </p>
+
+  <pre>current_product_id = None
+inspection_results = {}
+
+# Sensor task updates shared state
+current_product_id = product.product_id
+
+# AI task later reads shared state
+mapped_product_id = current_product_id
+inspection_results[mapped_product_id] = ai_result</pre>
+
+  <h3>Example Failure</h3>
+
+  <table>
+    <tr><th>Step</th><th>Event</th></tr>
+    <tr><td>1</td><td>Product P017 enters the inspection station.</td></tr>
+    <tr><td>2</td><td>AI task starts processing Product P017.</td></tr>
+    <tr><td>3</td><td>Sensor detects Product P030 and updates current_product_id.</td></tr>
+    <tr><td>4</td><td>AI result of P017 is written under P030.</td></tr>
+    <tr><td>5</td><td>Actuator may pass/reject the wrong product.</td></tr>
+  </table>
+
+  <div class="callout">
+    <b>Important implication:</b> The logic of individual tasks may be correct, but the system output becomes incorrect due to unsafe interleaving.
+  </div>
+
+  <div class="footer">
+    <span>OS Reliability in AI-Assisted Lean Visual Inspection</span>
+    <span>Page 9</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">Unsafe Simulation</div>
+  <h2>Unsafe Shared-State Simulation</h2>
+
+  <p>
+    The unsafe simulation uses concurrent threads for the sensor, AI inspection task, and actuator task. Random timing delays are introduced to create realistic interleaving. Because the shared product identity is not protected, race events appear in the simulation timeline.
+  </p>
+
+  <pre>threads = [
+    threading.Thread(target=sensor_task, args=(products,)),
+    threading.Thread(target=ai_inspection_task, args=(products,)),
+    threading.Thread(target=actuator_task, args=(products,))
+]
+
+for thread in threads:
+    thread.start()
+
+for thread in threads:
+    thread.join()</pre>
+
+  <div class="figure">
+    <div class="figure-title">Figure 4. Unsafe Shared-State Behaviour</div>
+    <div class="flow">
+      <div class="box">Sensor updates P030</div>
+      <div class="arrow">»</div>
+      <div class="box">AI result belongs to P017</div>
+      <div class="arrow">»</div>
+      <div class="box">Result stored as P030</div>
+    </div>
+  </div>
+
+  <p>
+    In the browser preview, unsafe mode is represented with red race-condition events. These events show that the result of one product has been mapped to a different product ID. This demonstrates the exact failure mode that synchronization is supposed to prevent.
+  </p>
+
+  <div class="footer">
+    <span>Dept. of AIML, BMSCE</span>
+    <span>Page 10</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">Safe Pipeline</div>
+  <h2>Safe Synchronized Pipeline</h2>
+
+  <p>
+    The safe model removes dependence on global shared product identity. Instead, each product is represented as a ProductPacket. This packet travels through queues from sensor to camera, inspection, decision, and actuator. Since each result remains attached to its original product packet, product identity is preserved.
+  </p>
+
+  <pre>@dataclass
+class ProductPacket:
+    product_id: str
+    is_defective: bool
+    frame_id: Optional[str] = None
+    ai_result: Optional[str] = None
+    rule_result: Optional[str] = None
+    final_decision: Optional[str] = None
+    rejected_product_id: Optional[str] = None</pre>
+
+  <div class="figure">
+    <div class="figure-title">Figure 5. Safe ProductPacket Flow</div>
+    <div class="flow">
+      <div class="box">ProductPacket</div><div class="arrow">»</div>
+      <div class="box">Camera Queue</div><div class="arrow">»</div>
+      <div class="box">Inspection Queue</div><div class="arrow">»</div>
+      <div class="box">Decision Queue</div><div class="arrow">»</div>
+      <div class="box">Actuator</div>
+    </div>
+  </div>
+
+  <table>
+    <tr><th>Unsafe Model</th><th>Safe Model</th></tr>
+    <tr><td>Uses global current_product_id.</td><td>Uses product-specific ProductPacket.</td></tr>
+    <tr><td>AI result can attach to wrong product.</td><td>AI result remains attached to original packet.</td></tr>
+    <tr><td>Race condition count is non-zero.</td><td>Race condition count becomes zero.</td></tr>
+    <tr><td>Physical decision may be incorrect.</td><td>Pass/reject decision remains consistent.</td></tr>
+  </table>
+
+  <div class="footer">
+    <span>OS Reliability in AI-Assisted Lean Visual Inspection</span>
+    <span>Page 11</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">Scheduling Problem</div>
+  <h2>Scheduling Problem in the Inspection Cell</h2>
+
+  <p>
+    The scheduling problem arises because products are physically moving on a conveyor. The system must complete sensing, image capture, inspection, decision fusion, and actuation before the product crosses the rejection point. Therefore, the scheduling problem is not only about fairness or waiting time. It is also about deadline safety.
+  </p>
+
+  <table>
+    <tr><th>Task</th><th>Type</th><th>Deadline Importance</th></tr>
+    <tr><td>Sensor</td><td>Event-driven / periodic</td><td>Must detect product arrival quickly.</td></tr>
+    <tr><td>Camera</td><td>I/O task</td><td>Must capture frame before product moves away.</td></tr>
+    <tr><td>AI Inspection</td><td>CPU-bound task</td><td>Must finish before decision stage.</td></tr>
+    <tr><td>Rule Inspection</td><td>Deterministic task</td><td>Supports decision reliability.</td></tr>
+    <tr><td>Decision Fusion</td><td>Control task</td><td>Combines AI and rule result.</td></tr>
+    <tr><td>Actuator</td><td>Real-time output task</td><td>Must reject product before it passes gate.</td></tr>
+    <tr><td>Logger</td><td>I/O-bound task</td><td>Important but less urgent.</td></tr>
+  </table>
+
+  <div class="callout">
+    <b>Scheduling interpretation:</b> A missed deadline means the inspection-cell task completed too late to support the physical product flow.
+  </div>
+
+  <div class="footer">
+    <span>Dept. of AIML, BMSCE</span>
+    <span>Page 12</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">Scheduling Algorithms</div>
+  <h2>Scheduling Algorithms</h2>
+
+  <p>
+    Five scheduling algorithms were implemented and compared. The goal was not only to show that scheduling algorithms work, but to explain which algorithm best fits a deadline-driven visual-inspection cell.
+  </p>
+
+  <table>
+    <tr><th>Algorithm</th><th>Principle</th><th>Project Interpretation</th></tr>
+    <tr>
+      <td>FCFS</td>
+      <td>Jobs execute in arrival order.</td>
+      <td>Simple baseline but ignores urgency.</td>
+    </tr>
+    <tr>
+      <td>Round Robin</td>
+      <td>Each job receives a fixed time quantum.</td>
+      <td>Fair but may fragment urgent inspection work.</td>
+    </tr>
+    <tr>
+      <td>Priority Scheduling</td>
+      <td>Jobs execute based on assigned priority.</td>
+      <td>Useful when sensor/actuator tasks are critical.</td>
+    </tr>
+    <tr>
+      <td>RMS</td>
+      <td>Shorter-period tasks receive higher priority.</td>
+      <td>Relevant for periodic embedded-control tasks.</td>
+    </tr>
+    <tr>
+      <td>EDF</td>
+      <td>Nearest absolute deadline runs first.</td>
+      <td>Best conceptual fit for conveyor-deadline systems.</td>
+    </tr>
+  </table>
+
+  <pre>ready_queue.sort(key=lambda job: job["absolute_deadline"])
+current_job = ready_queue.pop(0)</pre>
+
+  <div class="callout">
+    <b>Chosen main algorithm:</b> EDF is treated as the main scheduling algorithm because the case study is deadline-driven.
+  </div>
+
+  <div class="footer">
+    <span>OS Reliability in AI-Assisted Lean Visual Inspection</span>
+    <span>Page 13</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">Implementation</div>
+  <h2>Implementation Details and Code Snippets</h2>
+
+  <p>
+    The project was implemented in Python and organized as a modular simulation backend. Each module handles one part of the OS model: unsafe race-condition simulation, safe pipeline simulation, scheduling algorithms, metrics, event export, validation, and replay.
+  </p>
+
+  <table>
+    <tr><th>File</th><th>Purpose</th></tr>
+    <tr><td>unsafe_race_model.py</td><td>Models race condition using unsafe shared state.</td></tr>
+    <tr><td>synchronized_pipeline.py</td><td>Models safe ProductPacket and queue-based flow.</td></tr>
+    <tr><td>edf_scheduler.py</td><td>Implements Earliest Deadline First scheduling.</td></tr>
+    <tr><td>rms_scheduler.py</td><td>Implements Rate Monotonic Scheduling.</td></tr>
+    <tr><td>round_robin_scheduler.py</td><td>Implements Round Robin scheduling.</td></tr>
+    <tr><td>priority_scheduler.py</td><td>Implements fixed-priority scheduling.</td></tr>
+    <tr><td>event_exporter.py</td><td>Exports JSON events for browser and Unreal playback.</td></tr>
+    <tr><td>comparative_analysis.py</td><td>Generates scheduling comparison charts.</td></tr>
+  </table>
+
+  <pre>./run_project.sh
+
+# Generated outputs:
+simulation_events/
+visual_outputs/
+unreal_project/event_tables/
+docs/SCHEDULING_COMPARATIVE_ANALYSIS.md</pre>
+
+  <div class="footer">
+    <span>Dept. of AIML, BMSCE</span>
+    <span>Page 14</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">Outputs</div>
+  <h2>Simulation Outputs</h2>
+
+  <p>
+    The project generates JSON event timelines, CSV event tables, browser replay, terminal replay, and visual charts. The JSON and CSV files allow the same simulation data to be used in different presentation layers, including browser preview and Unreal Engine.
+  </p>
+
+  <table>
+    <tr><th>Output</th><th>Description</th></tr>
+    <tr><td>unsafe_mode_events.json</td><td>Unsafe race-condition timeline.</td></tr>
+    <tr><td>safe_mode_events.json</td><td>Safe synchronized pipeline timeline.</td></tr>
+    <tr><td>edf_schedule.json</td><td>EDF scheduling timeline.</td></tr>
+    <tr><td>rms_schedule.json</td><td>RMS scheduling timeline.</td></tr>
+    <tr><td>all_scheduler_deadline_comparison.png</td><td>Missed deadline comparison chart.</td></tr>
+    <tr><td>race_condition_comparison.png</td><td>Unsafe vs safe race-count chart.</td></tr>
+  </table>
+
+  <div class="figure">
+    <div class="figure-title">Figure 6. Race Condition Comparison</div>
+    <img src="assets/race_condition_comparison.png" alt="Race condition comparison chart">
+  </div>
+
+  <div class="footer">
+    <span>OS Reliability in AI-Assisted Lean Visual Inspection</span>
+    <span>Page 15</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">Comparative Analysis</div>
+  <h2>Comparative Analysis</h2>
+
+  <p>
+    The comparative analysis evaluates the scheduling algorithms using missed deadlines, average waiting time, and average turnaround time. In the inspection-cell context, missed deadlines are especially important because a late task can cause the physical product to pass beyond the rejection point.
+  </p>
+
+  <div class="figure">
+    <div class="figure-title">Figure 7. Missed Deadlines by Scheduling Algorithm</div>
+    <img src="assets/all_scheduler_deadline_comparison.png" alt="Deadline comparison chart">
+  </div>
+
+  <div class="figure">
+    <div class="figure-title">Figure 8. Average Waiting Time by Scheduling Algorithm</div>
+    <img src="assets/all_scheduler_waiting_time_comparison.png" alt="Waiting time comparison chart">
+  </div>
+
+  <p>
+    EDF is the strongest conceptual fit because it directly considers deadlines. RMS is also relevant because industrial control systems often contain periodic tasks. Priority Scheduling is intuitive when actuator and sensor tasks are treated as critical. Round Robin improves fairness but may fragment urgent tasks. FCFS is the simplest baseline but is weakest for deadline-sensitive systems.
+  </p>
+
+  <div class="footer">
+    <span>Dept. of AIML, BMSCE</span>
+    <span>Page 16</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">Digital Twin</div>
+  <h2>Unreal Engine Digital-Twin Handoff</h2>
+
+  <p>
+    The browser preview is useful for quick demonstration, but the project is also structured for a more advanced Unreal Engine simulation. Python acts as the OS simulation backend, while Unreal Engine can act as the digital-twin visualization layer.
+  </p>
+
+  <table>
+    <tr><th>Python Backend</th><th>Unreal Engine Layer</th></tr>
+    <tr><td>Generates race/safe/scheduling events.</td><td>Animates product movement.</td></tr>
+    <tr><td>Exports JSON and CSV timelines.</td><td>Reads event tables or hardcoded arrays.</td></tr>
+    <tr><td>Computes deadline misses and race events.</td><td>Shows red race warning and amber deadline warning.</td></tr>
+    <tr><td>Implements OS concepts.</td><td>Shows industrial digital-twin scene.</td></tr>
+  </table>
+
+  <div class="figure">
+    <div class="figure-title">Figure 9. Unreal Digital-Twin Architecture</div>
+    <div class="flow">
+      <div class="box">Python OS Backend</div><div class="arrow">»</div>
+      <div class="box">JSON/CSV Events</div><div class="arrow">»</div>
+      <div class="box">Unreal Event Manager</div><div class="arrow">»</div>
+      <div class="box">3D Conveyor Scene</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <b>Future product angle:</b> In a real deployment, an AI visual-inspection system such as a MELSOFT VIXIO-style node could act as the inspection engine, while the OS reliability layer protects product identity, actuator timing, and logging consistency.
+  </div>
+
+  <div class="footer">
+    <span>OS Reliability in AI-Assisted Lean Visual Inspection</span>
+    <span>Page 17</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">Results</div>
+  <h2>Results and Discussion</h2>
+
+  <p>
+    The unsafe simulation demonstrates that race conditions can corrupt product-inspection mapping. Because the sensor updates shared product identity while the AI task may still be processing an earlier product, the result can be stored under the wrong product ID.
+  </p>
+
+  <p>
+    The safe synchronized pipeline eliminates this failure by preserving product identity inside a ProductPacket. Instead of relying on a global shared product ID, the product packet carries frame ID, AI result, rule result, final decision, and rejected product ID through the pipeline.
+  </p>
+
+  <div class="figure">
+    <div class="figure-title">Figure 10. EDF Gantt Chart</div>
+    <img src="assets/edf_gantt_chart.png" alt="EDF Gantt chart">
+  </div>
+
+  <div class="figure">
+    <div class="figure-title">Figure 11. RMS Gantt Chart</div>
+    <img src="assets/rms_gantt_chart.png" alt="RMS Gantt chart">
+  </div>
+
+  <p>
+    The scheduling analysis shows that deadline-aware algorithms are more meaningful for this case study than purely arrival-based scheduling. EDF aligns naturally with the moving-conveyor constraint, while RMS provides a useful periodic-control comparison.
+  </p>
+
+  <div class="footer">
+    <span>Dept. of AIML, BMSCE</span>
+    <span>Page 18</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">Limitations</div>
+  <h2>Limitations and Future Scope</h2>
+
+  <h3>Limitations</h3>
+  <ul>
+    <li>The current system uses synthetic products and simulated inspection results.</li>
+    <li>The AI inspection module is abstracted rather than using a trained computer-vision model.</li>
+    <li>The Unreal Engine scene is currently a handoff plan rather than a completed 3D build.</li>
+    <li>The scheduling model is simplified and does not fully simulate multicore hardware or actual PLC timing.</li>
+  </ul>
+
+  <h3>Future Scope</h3>
+  <ul>
+    <li>Integrate real image data for scratch, dent, or surface-defect detection.</li>
+    <li>Add a lightweight anomaly-detection or CNN-based inspection model.</li>
+    <li>Build the Unreal Engine digital twin with conveyor, camera station, actuator, and status board.</li>
+    <li>Connect the event system to MQTT or OPC-UA for PLC/SCADA-style communication.</li>
+    <li>Extend the scheduler to model multicore execution, priority inversion, starvation, and fault recovery.</li>
+    <li>Use the system as a technician-facing training simulator for lean inspection cells.</li>
+  </ul>
+
+  <div class="footer">
+    <span>OS Reliability in AI-Assisted Lean Visual Inspection</span>
+    <span>Page 19</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">Conclusion</div>
+  <h2>Conclusion</h2>
+
+  <p>
+    This project demonstrates that race conditions can have practical consequences beyond incorrect variable values. In an AI-assisted visual-inspection cell, a race condition can corrupt the relationship between product ID, image frame, inspection result, and actuator command. This can lead to wrong pass/reject decisions, which makes the issue directly relevant to quality control.
+  </p>
+
+  <p>
+    The unsafe shared-state simulation shows how product-inspection mapping can fail. The safe synchronized model shows how ProductPacket-based queue flow preserves identity and eliminates race events. The scheduling analysis compares FCFS, Round Robin, Priority Scheduling, RMS, and EDF, showing that deadline-aware thinking is important when products physically move through an inspection line.
+  </p>
+
+  <div class="callout">
+    <b>Final conclusion:</b> Reliable automation requires both correct logic and correct coordination. Synchronization protects shared state, while scheduling protects time-critical execution.
+  </div>
+
+  <div class="footer">
+    <span>Dept. of AIML, BMSCE</span>
+    <span>Page 20</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">References</div>
+  <h2>References</h2>
+
+  <ol>
+    <li>Silberschatz, A., Galvin, P. B., and Gagne, G. <i>Operating System Concepts</i>.</li>
+    <li>Tanenbaum, A. S. and Bos, H. <i>Modern Operating Systems</i>.</li>
+    <li>Stallings, W. <i>Operating Systems: Internals and Design Principles</i>.</li>
+    <li>Liu, C. L. and Layland, J. W. “Scheduling Algorithms for Multiprogramming in a Hard-Real-Time Environment.”</li>
+    <li>Mitsubishi Electric Factory Automation. MELSOFT VIXIO product information and AI-assisted visual inspection workflow materials.</li>
+    <li>Python documentation: threading, queue, dataclasses, json, csv.</li>
+    <li>Unreal Engine documentation: Blueprint visual scripting, DataTables, JSON/CSV import workflows.</li>
+  </ol>
+
+  <div class="footer">
+    <span>OS Reliability in AI-Assisted Lean Visual Inspection</span>
+    <span>Page 21</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="topline"></div>
+  <div class="kicker">GitHub and Demo</div>
+  <h2>GitHub and Demo Notes</h2>
+
+  <p>
+    The project has been pushed to GitHub as a standalone software artifact. The repository contains the backend simulation code, generated outputs, browser preview, Unreal Engine handoff documentation, report draft, presentation outline, and faculty demo script.
+  </p>
+
+  <table>
+    <tr><th>Demo Command</th><th>Purpose</th></tr>
+    <tr><td>./run_project.sh</td><td>Runs simulation backend, validation, charts, comparative analysis, and exports.</td></tr>
+    <tr><td>python -m backend.replay_events</td><td>Runs terminal replay of unsafe, safe, and scheduling modes.</td></tr>
+    <tr><td>python3 -m http.server 8000</td><td>Starts browser preview server.</td></tr>
+    <tr><td>http://localhost:8000/preview/</td><td>Opens browser simulation preview.</td></tr>
+  </table>
+
+  <div class="callout">
+    <b>Repository:</b> https://github.com/VrishinDutt/OS_Lean_Visual_Inspection_Digital_Twin
+  </div>
+
+  <p>
+    Suggested viva explanation: The browser preview is the lightweight visualization layer. The Python backend is the actual Operating Systems model. Unreal Engine is the future digital-twin simulation layer that can consume the exported JSON/CSV event timelines.
+  </p>
+
+  <div class="footer">
+    <span>Dept. of AIML, BMSCE</span>
+    <span>Page 22</span>
+  </div>
+</section>
+
+</body>
+</html>

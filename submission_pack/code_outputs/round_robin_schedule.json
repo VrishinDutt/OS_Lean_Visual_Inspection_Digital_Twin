@@ -1,0 +1,1525 @@
+{
+  "mode": "round_robin",
+  "schedule": [
+    {
+      "job_id": "P001_sensor",
+      "product_id": "P001",
+      "task": "sensor",
+      "arrival_time": 8,
+      "burst_time": 2,
+      "absolute_deadline": 18,
+      "start_time": 8,
+      "completion_time": 10,
+      "waiting_time": 0,
+      "turnaround_time": 2,
+      "deadline_missed": false
+    },
+    {
+      "job_id": "P001_camera",
+      "product_id": "P001",
+      "task": "camera",
+      "arrival_time": 8,
+      "burst_time": 4,
+      "absolute_deadline": 33,
+      "start_time": 10,
+      "completion_time": 14,
+      "waiting_time": 2,
+      "turnaround_time": 6,
+      "deadline_missed": false
+    },
+    {
+      "job_id": "P001_decision_fusion",
+      "product_id": "P001",
+      "task": "decision_fusion",
+      "arrival_time": 8,
+      "burst_time": 3,
+      "absolute_deadline": 93,
+      "start_time": 22,
+      "completion_time": 25,
+      "waiting_time": 14,
+      "turnaround_time": 17,
+      "deadline_missed": false
+    },
+    {
+      "job_id": "P001_actuator",
+      "product_id": "P001",
+      "task": "actuator",
+      "arrival_time": 8,
+      "burst_time": 4,
+      "absolute_deadline": 108,
+      "start_time": 25,
+      "completion_time": 29,
+      "waiting_time": 17,
+      "turnaround_time": 21,
+      "deadline_missed": false
+    },
+    {
+      "job_id": "P002_sensor",
+      "product_id": "P002",
+      "task": "sensor",
+      "arrival_time": 16,
+      "burst_time": 2,
+      "absolute_deadline": 26,
+      "start_time": 33,
+      "completion_time": 35,
+      "waiting_time": 17,
+      "turnaround_time": 19,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P002_camera",
+      "product_id": "P002",
+      "task": "camera",
+      "arrival_time": 16,
+      "burst_time": 4,
+      "absolute_deadline": 41,
+      "start_time": 35,
+      "completion_time": 39,
+      "waiting_time": 19,
+      "turnaround_time": 23,
+      "deadline_missed": false
+    },
+    {
+      "job_id": "P002_decision_fusion",
+      "product_id": "P002",
+      "task": "decision_fusion",
+      "arrival_time": 16,
+      "burst_time": 3,
+      "absolute_deadline": 101,
+      "start_time": 47,
+      "completion_time": 50,
+      "waiting_time": 31,
+      "turnaround_time": 34,
+      "deadline_missed": false
+    },
+    {
+      "job_id": "P002_actuator",
+      "product_id": "P002",
+      "task": "actuator",
+      "arrival_time": 16,
+      "burst_time": 4,
+      "absolute_deadline": 116,
+      "start_time": 50,
+      "completion_time": 54,
+      "waiting_time": 34,
+      "turnaround_time": 38,
+      "deadline_missed": false
+    },
+    {
+      "job_id": "P001_rule_inspection",
+      "product_id": "P001",
+      "task": "rule_inspection",
+      "arrival_time": 8,
+      "burst_time": 5,
+      "absolute_deadline": 53,
+      "start_time": 18,
+      "completion_time": 63,
+      "waiting_time": 50,
+      "turnaround_time": 55,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P003_sensor",
+      "product_id": "P003",
+      "task": "sensor",
+      "arrival_time": 24,
+      "burst_time": 2,
+      "absolute_deadline": 34,
+      "start_time": 63,
+      "completion_time": 65,
+      "waiting_time": 39,
+      "turnaround_time": 41,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P003_camera",
+      "product_id": "P003",
+      "task": "camera",
+      "arrival_time": 24,
+      "burst_time": 4,
+      "absolute_deadline": 49,
+      "start_time": 65,
+      "completion_time": 69,
+      "waiting_time": 41,
+      "turnaround_time": 45,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P003_decision_fusion",
+      "product_id": "P003",
+      "task": "decision_fusion",
+      "arrival_time": 24,
+      "burst_time": 3,
+      "absolute_deadline": 109,
+      "start_time": 77,
+      "completion_time": 80,
+      "waiting_time": 53,
+      "turnaround_time": 56,
+      "deadline_missed": false
+    },
+    {
+      "job_id": "P003_actuator",
+      "product_id": "P003",
+      "task": "actuator",
+      "arrival_time": 24,
+      "burst_time": 4,
+      "absolute_deadline": 124,
+      "start_time": 80,
+      "completion_time": 84,
+      "waiting_time": 56,
+      "turnaround_time": 60,
+      "deadline_missed": false
+    },
+    {
+      "job_id": "P004_sensor",
+      "product_id": "P004",
+      "task": "sensor",
+      "arrival_time": 32,
+      "burst_time": 2,
+      "absolute_deadline": 42,
+      "start_time": 88,
+      "completion_time": 90,
+      "waiting_time": 56,
+      "turnaround_time": 58,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P004_camera",
+      "product_id": "P004",
+      "task": "camera",
+      "arrival_time": 32,
+      "burst_time": 4,
+      "absolute_deadline": 57,
+      "start_time": 90,
+      "completion_time": 94,
+      "waiting_time": 58,
+      "turnaround_time": 62,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P004_decision_fusion",
+      "product_id": "P004",
+      "task": "decision_fusion",
+      "arrival_time": 32,
+      "burst_time": 3,
+      "absolute_deadline": 117,
+      "start_time": 102,
+      "completion_time": 105,
+      "waiting_time": 70,
+      "turnaround_time": 73,
+      "deadline_missed": false
+    },
+    {
+      "job_id": "P004_actuator",
+      "product_id": "P004",
+      "task": "actuator",
+      "arrival_time": 32,
+      "burst_time": 4,
+      "absolute_deadline": 132,
+      "start_time": 105,
+      "completion_time": 109,
+      "waiting_time": 73,
+      "turnaround_time": 77,
+      "deadline_missed": false
+    },
+    {
+      "job_id": "P001_logger",
+      "product_id": "P001",
+      "task": "logger",
+      "arrival_time": 8,
+      "burst_time": 6,
+      "absolute_deadline": 168,
+      "start_time": 29,
+      "completion_time": 115,
+      "waiting_time": 101,
+      "turnaround_time": 107,
+      "deadline_missed": false
+    },
+    {
+      "job_id": "P005_sensor",
+      "product_id": "P005",
+      "task": "sensor",
+      "arrival_time": 40,
+      "burst_time": 2,
+      "absolute_deadline": 50,
+      "start_time": 115,
+      "completion_time": 117,
+      "waiting_time": 75,
+      "turnaround_time": 77,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P005_camera",
+      "product_id": "P005",
+      "task": "camera",
+      "arrival_time": 40,
+      "burst_time": 4,
+      "absolute_deadline": 65,
+      "start_time": 117,
+      "completion_time": 121,
+      "waiting_time": 77,
+      "turnaround_time": 81,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P005_decision_fusion",
+      "product_id": "P005",
+      "task": "decision_fusion",
+      "arrival_time": 40,
+      "burst_time": 3,
+      "absolute_deadline": 125,
+      "start_time": 129,
+      "completion_time": 132,
+      "waiting_time": 89,
+      "turnaround_time": 92,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P005_actuator",
+      "product_id": "P005",
+      "task": "actuator",
+      "arrival_time": 40,
+      "burst_time": 4,
+      "absolute_deadline": 140,
+      "start_time": 132,
+      "completion_time": 136,
+      "waiting_time": 92,
+      "turnaround_time": 96,
+      "deadline_missed": false
+    },
+    {
+      "job_id": "P002_rule_inspection",
+      "product_id": "P002",
+      "task": "rule_inspection",
+      "arrival_time": 16,
+      "burst_time": 5,
+      "absolute_deadline": 61,
+      "start_time": 43,
+      "completion_time": 145,
+      "waiting_time": 124,
+      "turnaround_time": 129,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P006_sensor",
+      "product_id": "P006",
+      "task": "sensor",
+      "arrival_time": 48,
+      "burst_time": 2,
+      "absolute_deadline": 58,
+      "start_time": 145,
+      "completion_time": 147,
+      "waiting_time": 97,
+      "turnaround_time": 99,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P006_camera",
+      "product_id": "P006",
+      "task": "camera",
+      "arrival_time": 48,
+      "burst_time": 4,
+      "absolute_deadline": 73,
+      "start_time": 147,
+      "completion_time": 151,
+      "waiting_time": 99,
+      "turnaround_time": 103,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P006_decision_fusion",
+      "product_id": "P006",
+      "task": "decision_fusion",
+      "arrival_time": 48,
+      "burst_time": 3,
+      "absolute_deadline": 133,
+      "start_time": 159,
+      "completion_time": 162,
+      "waiting_time": 111,
+      "turnaround_time": 114,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P006_actuator",
+      "product_id": "P006",
+      "task": "actuator",
+      "arrival_time": 48,
+      "burst_time": 4,
+      "absolute_deadline": 148,
+      "start_time": 162,
+      "completion_time": 166,
+      "waiting_time": 114,
+      "turnaround_time": 118,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P007_sensor",
+      "product_id": "P007",
+      "task": "sensor",
+      "arrival_time": 56,
+      "burst_time": 2,
+      "absolute_deadline": 66,
+      "start_time": 170,
+      "completion_time": 172,
+      "waiting_time": 114,
+      "turnaround_time": 116,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P007_camera",
+      "product_id": "P007",
+      "task": "camera",
+      "arrival_time": 56,
+      "burst_time": 4,
+      "absolute_deadline": 81,
+      "start_time": 172,
+      "completion_time": 176,
+      "waiting_time": 116,
+      "turnaround_time": 120,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P007_decision_fusion",
+      "product_id": "P007",
+      "task": "decision_fusion",
+      "arrival_time": 56,
+      "burst_time": 3,
+      "absolute_deadline": 141,
+      "start_time": 184,
+      "completion_time": 187,
+      "waiting_time": 128,
+      "turnaround_time": 131,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P007_actuator",
+      "product_id": "P007",
+      "task": "actuator",
+      "arrival_time": 56,
+      "burst_time": 4,
+      "absolute_deadline": 156,
+      "start_time": 187,
+      "completion_time": 191,
+      "waiting_time": 131,
+      "turnaround_time": 135,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P002_logger",
+      "product_id": "P002",
+      "task": "logger",
+      "arrival_time": 16,
+      "burst_time": 6,
+      "absolute_deadline": 176,
+      "start_time": 54,
+      "completion_time": 197,
+      "waiting_time": 175,
+      "turnaround_time": 181,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P001_ai_inspection",
+      "product_id": "P001",
+      "task": "ai_inspection",
+      "arrival_time": 8,
+      "burst_time": 12,
+      "absolute_deadline": 78,
+      "start_time": 14,
+      "completion_time": 201,
+      "waiting_time": 181,
+      "turnaround_time": 193,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P008_sensor",
+      "product_id": "P008",
+      "task": "sensor",
+      "arrival_time": 64,
+      "burst_time": 2,
+      "absolute_deadline": 74,
+      "start_time": 201,
+      "completion_time": 203,
+      "waiting_time": 137,
+      "turnaround_time": 139,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P008_camera",
+      "product_id": "P008",
+      "task": "camera",
+      "arrival_time": 64,
+      "burst_time": 4,
+      "absolute_deadline": 89,
+      "start_time": 203,
+      "completion_time": 207,
+      "waiting_time": 139,
+      "turnaround_time": 143,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P008_decision_fusion",
+      "product_id": "P008",
+      "task": "decision_fusion",
+      "arrival_time": 64,
+      "burst_time": 3,
+      "absolute_deadline": 149,
+      "start_time": 215,
+      "completion_time": 218,
+      "waiting_time": 151,
+      "turnaround_time": 154,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P008_actuator",
+      "product_id": "P008",
+      "task": "actuator",
+      "arrival_time": 64,
+      "burst_time": 4,
+      "absolute_deadline": 164,
+      "start_time": 218,
+      "completion_time": 222,
+      "waiting_time": 154,
+      "turnaround_time": 158,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P003_rule_inspection",
+      "product_id": "P003",
+      "task": "rule_inspection",
+      "arrival_time": 24,
+      "burst_time": 5,
+      "absolute_deadline": 69,
+      "start_time": 73,
+      "completion_time": 231,
+      "waiting_time": 202,
+      "turnaround_time": 207,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P003_logger",
+      "product_id": "P003",
+      "task": "logger",
+      "arrival_time": 24,
+      "burst_time": 6,
+      "absolute_deadline": 184,
+      "start_time": 84,
+      "completion_time": 233,
+      "waiting_time": 203,
+      "turnaround_time": 209,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P004_rule_inspection",
+      "product_id": "P004",
+      "task": "rule_inspection",
+      "arrival_time": 32,
+      "burst_time": 5,
+      "absolute_deadline": 77,
+      "start_time": 98,
+      "completion_time": 238,
+      "waiting_time": 201,
+      "turnaround_time": 206,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P004_logger",
+      "product_id": "P004",
+      "task": "logger",
+      "arrival_time": 32,
+      "burst_time": 6,
+      "absolute_deadline": 192,
+      "start_time": 109,
+      "completion_time": 240,
+      "waiting_time": 202,
+      "turnaround_time": 208,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P005_rule_inspection",
+      "product_id": "P005",
+      "task": "rule_inspection",
+      "arrival_time": 40,
+      "burst_time": 5,
+      "absolute_deadline": 85,
+      "start_time": 125,
+      "completion_time": 245,
+      "waiting_time": 200,
+      "turnaround_time": 205,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P005_logger",
+      "product_id": "P005",
+      "task": "logger",
+      "arrival_time": 40,
+      "burst_time": 6,
+      "absolute_deadline": 200,
+      "start_time": 136,
+      "completion_time": 247,
+      "waiting_time": 201,
+      "turnaround_time": 207,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P002_ai_inspection",
+      "product_id": "P002",
+      "task": "ai_inspection",
+      "arrival_time": 16,
+      "burst_time": 12,
+      "absolute_deadline": 86,
+      "start_time": 39,
+      "completion_time": 251,
+      "waiting_time": 223,
+      "turnaround_time": 235,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P006_rule_inspection",
+      "product_id": "P006",
+      "task": "rule_inspection",
+      "arrival_time": 48,
+      "burst_time": 5,
+      "absolute_deadline": 93,
+      "start_time": 155,
+      "completion_time": 256,
+      "waiting_time": 203,
+      "turnaround_time": 208,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P006_logger",
+      "product_id": "P006",
+      "task": "logger",
+      "arrival_time": 48,
+      "burst_time": 6,
+      "absolute_deadline": 208,
+      "start_time": 166,
+      "completion_time": 258,
+      "waiting_time": 204,
+      "turnaround_time": 210,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P007_rule_inspection",
+      "product_id": "P007",
+      "task": "rule_inspection",
+      "arrival_time": 56,
+      "burst_time": 5,
+      "absolute_deadline": 101,
+      "start_time": 180,
+      "completion_time": 263,
+      "waiting_time": 202,
+      "turnaround_time": 207,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P007_logger",
+      "product_id": "P007",
+      "task": "logger",
+      "arrival_time": 56,
+      "burst_time": 6,
+      "absolute_deadline": 216,
+      "start_time": 191,
+      "completion_time": 265,
+      "waiting_time": 203,
+      "turnaround_time": 209,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P008_rule_inspection",
+      "product_id": "P008",
+      "task": "rule_inspection",
+      "arrival_time": 64,
+      "burst_time": 5,
+      "absolute_deadline": 109,
+      "start_time": 211,
+      "completion_time": 270,
+      "waiting_time": 201,
+      "turnaround_time": 206,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P008_logger",
+      "product_id": "P008",
+      "task": "logger",
+      "arrival_time": 64,
+      "burst_time": 6,
+      "absolute_deadline": 224,
+      "start_time": 222,
+      "completion_time": 272,
+      "waiting_time": 202,
+      "turnaround_time": 208,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P003_ai_inspection",
+      "product_id": "P003",
+      "task": "ai_inspection",
+      "arrival_time": 24,
+      "burst_time": 12,
+      "absolute_deadline": 94,
+      "start_time": 69,
+      "completion_time": 276,
+      "waiting_time": 240,
+      "turnaround_time": 252,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P004_ai_inspection",
+      "product_id": "P004",
+      "task": "ai_inspection",
+      "arrival_time": 32,
+      "burst_time": 12,
+      "absolute_deadline": 102,
+      "start_time": 94,
+      "completion_time": 280,
+      "waiting_time": 236,
+      "turnaround_time": 248,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P005_ai_inspection",
+      "product_id": "P005",
+      "task": "ai_inspection",
+      "arrival_time": 40,
+      "burst_time": 12,
+      "absolute_deadline": 110,
+      "start_time": 121,
+      "completion_time": 284,
+      "waiting_time": 232,
+      "turnaround_time": 244,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P006_ai_inspection",
+      "product_id": "P006",
+      "task": "ai_inspection",
+      "arrival_time": 48,
+      "burst_time": 12,
+      "absolute_deadline": 118,
+      "start_time": 151,
+      "completion_time": 288,
+      "waiting_time": 228,
+      "turnaround_time": 240,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P007_ai_inspection",
+      "product_id": "P007",
+      "task": "ai_inspection",
+      "arrival_time": 56,
+      "burst_time": 12,
+      "absolute_deadline": 126,
+      "start_time": 176,
+      "completion_time": 292,
+      "waiting_time": 224,
+      "turnaround_time": 236,
+      "deadline_missed": true
+    },
+    {
+      "job_id": "P008_ai_inspection",
+      "product_id": "P008",
+      "task": "ai_inspection",
+      "arrival_time": 64,
+      "burst_time": 12,
+      "absolute_deadline": 134,
+      "start_time": 207,
+      "completion_time": 296,
+      "waiting_time": 220,
+      "turnaround_time": 232,
+      "deadline_missed": true
+    }
+  ],
+  "events": [
+    {
+      "time": 8,
+      "product_id": "P001",
+      "event": "sensor_started",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 10,
+      "product_id": "P001",
+      "event": "sensor_completed",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 10,
+      "product_id": "P001",
+      "event": "camera_started",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 14,
+      "product_id": "P001",
+      "event": "camera_completed",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 22,
+      "product_id": "P001",
+      "event": "decision_fusion_started",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 25,
+      "product_id": "P001",
+      "event": "decision_fusion_completed",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 25,
+      "product_id": "P001",
+      "event": "actuator_started",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 29,
+      "product_id": "P001",
+      "event": "actuator_completed",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 33,
+      "product_id": "P002",
+      "event": "sensor_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 35,
+      "product_id": "P002",
+      "event": "sensor_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 35,
+      "product_id": "P002",
+      "event": "camera_started",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 39,
+      "product_id": "P002",
+      "event": "camera_completed",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 47,
+      "product_id": "P002",
+      "event": "decision_fusion_started",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 50,
+      "product_id": "P002",
+      "event": "decision_fusion_completed",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 50,
+      "product_id": "P002",
+      "event": "actuator_started",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 54,
+      "product_id": "P002",
+      "event": "actuator_completed",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 18,
+      "product_id": "P001",
+      "event": "rule_inspection_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 63,
+      "product_id": "P001",
+      "event": "rule_inspection_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 63,
+      "product_id": "P003",
+      "event": "sensor_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 65,
+      "product_id": "P003",
+      "event": "sensor_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 65,
+      "product_id": "P003",
+      "event": "camera_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 69,
+      "product_id": "P003",
+      "event": "camera_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 77,
+      "product_id": "P003",
+      "event": "decision_fusion_started",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 80,
+      "product_id": "P003",
+      "event": "decision_fusion_completed",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 80,
+      "product_id": "P003",
+      "event": "actuator_started",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 84,
+      "product_id": "P003",
+      "event": "actuator_completed",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 88,
+      "product_id": "P004",
+      "event": "sensor_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 90,
+      "product_id": "P004",
+      "event": "sensor_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 90,
+      "product_id": "P004",
+      "event": "camera_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 94,
+      "product_id": "P004",
+      "event": "camera_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 102,
+      "product_id": "P004",
+      "event": "decision_fusion_started",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 105,
+      "product_id": "P004",
+      "event": "decision_fusion_completed",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 105,
+      "product_id": "P004",
+      "event": "actuator_started",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 109,
+      "product_id": "P004",
+      "event": "actuator_completed",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 29,
+      "product_id": "P001",
+      "event": "logger_started",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 115,
+      "product_id": "P001",
+      "event": "logger_completed",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 115,
+      "product_id": "P005",
+      "event": "sensor_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 117,
+      "product_id": "P005",
+      "event": "sensor_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 117,
+      "product_id": "P005",
+      "event": "camera_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 121,
+      "product_id": "P005",
+      "event": "camera_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 129,
+      "product_id": "P005",
+      "event": "decision_fusion_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 132,
+      "product_id": "P005",
+      "event": "decision_fusion_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 132,
+      "product_id": "P005",
+      "event": "actuator_started",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 136,
+      "product_id": "P005",
+      "event": "actuator_completed",
+      "mode": "round_robin",
+      "status": "scheduled"
+    },
+    {
+      "time": 43,
+      "product_id": "P002",
+      "event": "rule_inspection_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 145,
+      "product_id": "P002",
+      "event": "rule_inspection_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 145,
+      "product_id": "P006",
+      "event": "sensor_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 147,
+      "product_id": "P006",
+      "event": "sensor_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 147,
+      "product_id": "P006",
+      "event": "camera_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 151,
+      "product_id": "P006",
+      "event": "camera_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 159,
+      "product_id": "P006",
+      "event": "decision_fusion_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 162,
+      "product_id": "P006",
+      "event": "decision_fusion_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 162,
+      "product_id": "P006",
+      "event": "actuator_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 166,
+      "product_id": "P006",
+      "event": "actuator_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 170,
+      "product_id": "P007",
+      "event": "sensor_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 172,
+      "product_id": "P007",
+      "event": "sensor_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 172,
+      "product_id": "P007",
+      "event": "camera_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 176,
+      "product_id": "P007",
+      "event": "camera_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 184,
+      "product_id": "P007",
+      "event": "decision_fusion_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 187,
+      "product_id": "P007",
+      "event": "decision_fusion_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 187,
+      "product_id": "P007",
+      "event": "actuator_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 191,
+      "product_id": "P007",
+      "event": "actuator_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 54,
+      "product_id": "P002",
+      "event": "logger_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 197,
+      "product_id": "P002",
+      "event": "logger_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 14,
+      "product_id": "P001",
+      "event": "ai_inspection_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 201,
+      "product_id": "P001",
+      "event": "ai_inspection_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 201,
+      "product_id": "P008",
+      "event": "sensor_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 203,
+      "product_id": "P008",
+      "event": "sensor_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 203,
+      "product_id": "P008",
+      "event": "camera_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 207,
+      "product_id": "P008",
+      "event": "camera_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 215,
+      "product_id": "P008",
+      "event": "decision_fusion_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 218,
+      "product_id": "P008",
+      "event": "decision_fusion_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 218,
+      "product_id": "P008",
+      "event": "actuator_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 222,
+      "product_id": "P008",
+      "event": "actuator_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 73,
+      "product_id": "P003",
+      "event": "rule_inspection_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 231,
+      "product_id": "P003",
+      "event": "rule_inspection_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 84,
+      "product_id": "P003",
+      "event": "logger_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 233,
+      "product_id": "P003",
+      "event": "logger_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 98,
+      "product_id": "P004",
+      "event": "rule_inspection_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 238,
+      "product_id": "P004",
+      "event": "rule_inspection_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 109,
+      "product_id": "P004",
+      "event": "logger_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 240,
+      "product_id": "P004",
+      "event": "logger_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 125,
+      "product_id": "P005",
+      "event": "rule_inspection_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 245,
+      "product_id": "P005",
+      "event": "rule_inspection_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 136,
+      "product_id": "P005",
+      "event": "logger_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 247,
+      "product_id": "P005",
+      "event": "logger_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 39,
+      "product_id": "P002",
+      "event": "ai_inspection_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 251,
+      "product_id": "P002",
+      "event": "ai_inspection_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 155,
+      "product_id": "P006",
+      "event": "rule_inspection_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 256,
+      "product_id": "P006",
+      "event": "rule_inspection_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 166,
+      "product_id": "P006",
+      "event": "logger_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 258,
+      "product_id": "P006",
+      "event": "logger_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 180,
+      "product_id": "P007",
+      "event": "rule_inspection_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 263,
+      "product_id": "P007",
+      "event": "rule_inspection_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 191,
+      "product_id": "P007",
+      "event": "logger_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 265,
+      "product_id": "P007",
+      "event": "logger_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 211,
+      "product_id": "P008",
+      "event": "rule_inspection_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 270,
+      "product_id": "P008",
+      "event": "rule_inspection_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 222,
+      "product_id": "P008",
+      "event": "logger_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 272,
+      "product_id": "P008",
+      "event": "logger_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 69,
+      "product_id": "P003",
+      "event": "ai_inspection_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 276,
+      "product_id": "P003",
+      "event": "ai_inspection_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 94,
+      "product_id": "P004",
+      "event": "ai_inspection_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 280,
+      "product_id": "P004",
+      "event": "ai_inspection_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 121,
+      "product_id": "P005",
+      "event": "ai_inspection_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 284,
+      "product_id": "P005",
+      "event": "ai_inspection_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 151,
+      "product_id": "P006",
+      "event": "ai_inspection_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 288,
+      "product_id": "P006",
+      "event": "ai_inspection_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 176,
+      "product_id": "P007",
+      "event": "ai_inspection_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 292,
+      "product_id": "P007",
+      "event": "ai_inspection_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 207,
+      "product_id": "P008",
+      "event": "ai_inspection_started",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    },
+    {
+      "time": 296,
+      "product_id": "P008",
+      "event": "ai_inspection_completed",
+      "mode": "round_robin",
+      "status": "deadline_missed"
+    }
+  ],
+  "metrics": {
+    "total_jobs": 56,
+    "missed_deadlines": 43,
+    "average_waiting_time": 126.11,
+    "average_turnaround_time": 131.25
+  }
+}
