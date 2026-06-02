@@ -271,8 +271,8 @@
       "frame_id": null,
       "ai_result": null,
       "rule_result": null,
-      "final_decision": "pass",
-      "rejected_product_id": null,
+      "final_decision": "reject",
+      "rejected_product_id": "P025",
       "race_condition": true,
       "deadline_missed": false
     },
@@ -282,8 +282,8 @@
       "frame_id": null,
       "ai_result": null,
       "rule_result": null,
-      "final_decision": "reject",
-      "rejected_product_id": "P026",
+      "final_decision": "pass",
+      "rejected_product_id": null,
       "race_condition": true,
       "deadline_missed": false
     },
@@ -334,630 +334,630 @@
   ],
   "events": [
     {
-      "time": 0.87,
+      "time": 515.7,
       "product_id": "P001",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.87,
+      "time": 515.71,
       "product_id": "P002",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.88,
-      "product_id": "P003",
-      "event": "sensor_detected",
-      "mode": "unsafe",
-      "status": "normal"
-    },
-    {
-      "time": 0.88,
+      "time": 515.71,
       "product_id": "P001",
       "event": "actuator_pass",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.88,
+      "time": 515.71,
       "product_id": "P001",
-      "event": "race_condition_result_mapped_to_P003",
+      "event": "race_condition_result_mapped_to_P002",
       "mode": "unsafe",
       "status": "race"
     },
     {
-      "time": 0.88,
+      "time": 515.72,
+      "product_id": "P003",
+      "event": "sensor_detected",
+      "mode": "unsafe",
+      "status": "normal"
+    },
+    {
+      "time": 515.72,
       "product_id": "P004",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.89,
-      "product_id": "P002",
-      "event": "actuator_pass",
-      "mode": "unsafe",
-      "status": "normal"
-    },
-    {
-      "time": 0.89,
-      "product_id": "P002",
-      "event": "race_condition_result_mapped_to_P004",
-      "mode": "unsafe",
-      "status": "race"
-    },
-    {
-      "time": 0.89,
-      "product_id": "P003",
-      "event": "race_condition_result_mapped_to_P004",
-      "mode": "unsafe",
-      "status": "race"
-    },
-    {
-      "time": 0.89,
+      "time": 515.72,
       "product_id": "P005",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.9,
-      "product_id": "P003",
+      "time": 515.73,
+      "product_id": "P002",
       "event": "actuator_pass",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.9,
+      "time": 515.73,
+      "product_id": "P002",
+      "event": "race_condition_result_mapped_to_P005",
+      "mode": "unsafe",
+      "status": "race"
+    },
+    {
+      "time": 515.73,
       "product_id": "P006",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.9,
-      "product_id": "P004",
+      "time": 515.73,
+      "product_id": "P003",
       "event": "race_condition_result_mapped_to_P006",
       "mode": "unsafe",
       "status": "race"
     },
     {
-      "time": 0.9,
+      "time": 515.74,
+      "product_id": "P003",
+      "event": "actuator_pass",
+      "mode": "unsafe",
+      "status": "normal"
+    },
+    {
+      "time": 515.74,
       "product_id": "P007",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.9,
+      "time": 515.75,
       "product_id": "P004",
       "event": "actuator_pass",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.91,
+      "time": 515.75,
+      "product_id": "P004",
+      "event": "race_condition_result_mapped_to_P007",
+      "mode": "unsafe",
+      "status": "race"
+    },
+    {
+      "time": 515.75,
       "product_id": "P008",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.91,
+      "time": 515.75,
       "product_id": "P005",
       "event": "race_condition_result_mapped_to_P008",
       "mode": "unsafe",
       "status": "race"
     },
     {
-      "time": 0.91,
+      "time": 515.75,
+      "product_id": "P009",
+      "event": "sensor_detected",
+      "mode": "unsafe",
+      "status": "normal"
+    },
+    {
+      "time": 515.76,
       "product_id": "P005",
       "event": "actuator_pass",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.92,
-      "product_id": "P009",
-      "event": "sensor_detected",
-      "mode": "unsafe",
-      "status": "normal"
-    },
-    {
-      "time": 0.92,
-      "product_id": "P006",
-      "event": "race_condition_result_mapped_to_P009",
-      "mode": "unsafe",
-      "status": "race"
-    },
-    {
-      "time": 0.92,
+      "time": 515.76,
       "product_id": "P010",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.92,
+      "time": 515.76,
+      "product_id": "P006",
+      "event": "race_condition_result_mapped_to_P010",
+      "mode": "unsafe",
+      "status": "race"
+    },
+    {
+      "time": 515.76,
       "product_id": "P006",
       "event": "actuator_pass",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.93,
+      "time": 515.77,
       "product_id": "P011",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.93,
+      "time": 515.77,
+      "product_id": "P007",
+      "event": "actuator_pass",
+      "mode": "unsafe",
+      "status": "normal"
+    },
+    {
+      "time": 515.77,
       "product_id": "P007",
       "event": "race_condition_result_mapped_to_P011",
       "mode": "unsafe",
       "status": "race"
     },
     {
-      "time": 0.93,
-      "product_id": "P007",
-      "event": "actuator_pass",
-      "mode": "unsafe",
-      "status": "normal"
-    },
-    {
-      "time": 0.94,
+      "time": 515.77,
       "product_id": "P012",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.94,
+      "time": 515.78,
       "product_id": "P008",
       "event": "race_condition_result_mapped_to_P012",
       "mode": "unsafe",
       "status": "race"
     },
     {
-      "time": 0.94,
+      "time": 515.78,
+      "product_id": "P013",
+      "event": "sensor_detected",
+      "mode": "unsafe",
+      "status": "normal"
+    },
+    {
+      "time": 515.78,
       "product_id": "P008",
       "event": "actuator_reject",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.95,
-      "product_id": "P013",
-      "event": "sensor_detected",
-      "mode": "unsafe",
-      "status": "normal"
-    },
-    {
-      "time": 0.95,
+      "time": 515.78,
       "product_id": "P009",
       "event": "race_condition_result_mapped_to_P013",
       "mode": "unsafe",
       "status": "race"
     },
     {
-      "time": 0.95,
+      "time": 515.79,
       "product_id": "P014",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.95,
+      "time": 515.79,
+      "product_id": "P010",
+      "event": "race_condition_result_mapped_to_P014",
+      "mode": "unsafe",
+      "status": "race"
+    },
+    {
+      "time": 515.79,
       "product_id": "P009",
       "event": "actuator_pass",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.96,
+      "time": 515.79,
       "product_id": "P015",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.96,
-      "product_id": "P010",
-      "event": "actuator_pass",
-      "mode": "unsafe",
-      "status": "normal"
-    },
-    {
-      "time": 0.96,
-      "product_id": "P010",
-      "event": "race_condition_result_mapped_to_P015",
-      "mode": "unsafe",
-      "status": "race"
-    },
-    {
-      "time": 0.96,
+      "time": 515.79,
       "product_id": "P016",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.97,
+      "time": 515.8,
+      "product_id": "P010",
+      "event": "actuator_pass",
+      "mode": "unsafe",
+      "status": "normal"
+    },
+    {
+      "time": 515.8,
       "product_id": "P011",
       "event": "race_condition_result_mapped_to_P016",
       "mode": "unsafe",
       "status": "race"
     },
     {
-      "time": 0.97,
+      "time": 515.8,
+      "product_id": "P017",
+      "event": "sensor_detected",
+      "mode": "unsafe",
+      "status": "normal"
+    },
+    {
+      "time": 515.8,
+      "product_id": "P012",
+      "event": "race_condition_result_mapped_to_P017",
+      "mode": "unsafe",
+      "status": "race"
+    },
+    {
+      "time": 515.81,
       "product_id": "P011",
       "event": "actuator_pass",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.97,
-      "product_id": "P017",
-      "event": "sensor_detected",
-      "mode": "unsafe",
-      "status": "normal"
-    },
-    {
-      "time": 0.97,
+      "time": 515.81,
       "product_id": "P018",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.98,
+      "time": 515.81,
       "product_id": "P012",
       "event": "actuator_pass",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.98,
-      "product_id": "P012",
+      "time": 515.82,
+      "product_id": "P013",
       "event": "race_condition_result_mapped_to_P018",
       "mode": "unsafe",
       "status": "race"
     },
     {
-      "time": 0.98,
+      "time": 515.82,
       "product_id": "P019",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.99,
+      "time": 515.83,
       "product_id": "P013",
       "event": "actuator_pass",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 0.99,
-      "product_id": "P013",
-      "event": "race_condition_result_mapped_to_P019",
-      "mode": "unsafe",
-      "status": "race"
-    },
-    {
-      "time": 0.99,
+      "time": 515.83,
       "product_id": "P020",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 1.0,
+      "time": 515.83,
+      "product_id": "P014",
+      "event": "race_condition_result_mapped_to_P020",
+      "mode": "unsafe",
+      "status": "race"
+    },
+    {
+      "time": 515.83,
       "product_id": "P014",
       "event": "actuator_pass",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 1.0,
+      "time": 515.84,
       "product_id": "P021",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 1.0,
-      "product_id": "P014",
-      "event": "race_condition_result_mapped_to_P021",
-      "mode": "unsafe",
-      "status": "race"
-    },
-    {
-      "time": 1.0,
+      "time": 515.84,
       "product_id": "P022",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 1.0,
-      "product_id": "P015",
-      "event": "actuator_pass",
-      "mode": "unsafe",
-      "status": "normal"
-    },
-    {
-      "time": 1.01,
+      "time": 515.84,
       "product_id": "P015",
       "event": "race_condition_result_mapped_to_P022",
       "mode": "unsafe",
       "status": "race"
     },
     {
-      "time": 1.01,
+      "time": 515.84,
+      "product_id": "P015",
+      "event": "actuator_pass",
+      "mode": "unsafe",
+      "status": "normal"
+    },
+    {
+      "time": 515.84,
       "product_id": "P023",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 1.01,
-      "product_id": "P024",
-      "event": "sensor_detected",
+      "time": 515.85,
+      "product_id": "P016",
+      "event": "race_condition_result_mapped_to_P023",
       "mode": "unsafe",
-      "status": "normal"
+      "status": "race"
     },
     {
-      "time": 1.01,
+      "time": 515.85,
       "product_id": "P016",
       "event": "actuator_reject",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 1.01,
-      "product_id": "P016",
-      "event": "race_condition_result_mapped_to_P024",
+      "time": 515.85,
+      "product_id": "P024",
+      "event": "sensor_detected",
       "mode": "unsafe",
-      "status": "race"
+      "status": "normal"
     },
     {
-      "time": 1.02,
+      "time": 515.86,
       "product_id": "P025",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 1.02,
+      "time": 515.86,
+      "product_id": "P017",
+      "event": "race_condition_result_mapped_to_P025",
+      "mode": "unsafe",
+      "status": "race"
+    },
+    {
+      "time": 515.86,
+      "product_id": "P017",
+      "event": "actuator_pass",
+      "mode": "unsafe",
+      "status": "normal"
+    },
+    {
+      "time": 515.86,
       "product_id": "P026",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 1.03,
-      "product_id": "P017",
-      "event": "race_condition_result_mapped_to_P026",
-      "mode": "unsafe",
-      "status": "race"
-    },
-    {
-      "time": 1.03,
-      "product_id": "P017",
-      "event": "actuator_pass",
-      "mode": "unsafe",
-      "status": "normal"
-    },
-    {
-      "time": 1.03,
-      "product_id": "P027",
-      "event": "sensor_detected",
-      "mode": "unsafe",
-      "status": "normal"
-    },
-    {
-      "time": 1.03,
+      "time": 515.87,
       "product_id": "P018",
       "event": "actuator_pass",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 1.04,
+      "time": 515.87,
+      "product_id": "P027",
+      "event": "sensor_detected",
+      "mode": "unsafe",
+      "status": "normal"
+    },
+    {
+      "time": 515.87,
       "product_id": "P018",
       "event": "race_condition_result_mapped_to_P027",
       "mode": "unsafe",
       "status": "race"
     },
     {
-      "time": 1.04,
-      "product_id": "P028",
-      "event": "sensor_detected",
-      "mode": "unsafe",
-      "status": "normal"
-    },
-    {
-      "time": 1.04,
-      "product_id": "P029",
-      "event": "sensor_detected",
-      "mode": "unsafe",
-      "status": "normal"
-    },
-    {
-      "time": 1.04,
+      "time": 515.87,
       "product_id": "P019",
       "event": "actuator_pass",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 1.04,
+      "time": 515.88,
+      "product_id": "P028",
+      "event": "sensor_detected",
+      "mode": "unsafe",
+      "status": "normal"
+    },
+    {
+      "time": 515.88,
       "product_id": "P019",
+      "event": "race_condition_result_mapped_to_P028",
+      "mode": "unsafe",
+      "status": "race"
+    },
+    {
+      "time": 515.88,
+      "product_id": "P020",
+      "event": "race_condition_result_mapped_to_P028",
+      "mode": "unsafe",
+      "status": "race"
+    },
+    {
+      "time": 515.88,
+      "product_id": "P029",
+      "event": "sensor_detected",
+      "mode": "unsafe",
+      "status": "normal"
+    },
+    {
+      "time": 515.89,
+      "product_id": "P020",
+      "event": "actuator_pass",
+      "mode": "unsafe",
+      "status": "normal"
+    },
+    {
+      "time": 515.89,
+      "product_id": "P021",
       "event": "race_condition_result_mapped_to_P029",
       "mode": "unsafe",
       "status": "race"
     },
     {
-      "time": 1.05,
+      "time": 515.89,
       "product_id": "P030",
       "event": "sensor_detected",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 1.06,
-      "product_id": "P020",
-      "event": "actuator_pass",
-      "mode": "unsafe",
-      "status": "normal"
-    },
-    {
-      "time": 1.06,
-      "product_id": "P020",
-      "event": "race_condition_result_mapped_to_P030",
-      "mode": "unsafe",
-      "status": "race"
-    },
-    {
-      "time": 1.06,
-      "product_id": "P021",
-      "event": "race_condition_result_mapped_to_P030",
-      "mode": "unsafe",
-      "status": "race"
-    },
-    {
-      "time": 1.06,
-      "product_id": "P021",
-      "event": "actuator_pass",
-      "mode": "unsafe",
-      "status": "normal"
-    },
-    {
-      "time": 1.07,
+      "time": 515.9,
       "product_id": "P022",
       "event": "race_condition_result_mapped_to_P030",
       "mode": "unsafe",
       "status": "race"
     },
     {
-      "time": 1.07,
+      "time": 515.9,
+      "product_id": "P021",
+      "event": "actuator_pass",
+      "mode": "unsafe",
+      "status": "normal"
+    },
+    {
+      "time": 515.9,
+      "product_id": "P023",
+      "event": "race_condition_result_mapped_to_P030",
+      "mode": "unsafe",
+      "status": "race"
+    },
+    {
+      "time": 515.91,
+      "product_id": "P024",
+      "event": "race_condition_result_mapped_to_P030",
+      "mode": "unsafe",
+      "status": "race"
+    },
+    {
+      "time": 515.91,
       "product_id": "P022",
       "event": "actuator_pass",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 1.08,
+      "time": 515.91,
       "product_id": "P023",
       "event": "actuator_pass",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 1.08,
-      "product_id": "P023",
-      "event": "race_condition_result_mapped_to_P030",
-      "mode": "unsafe",
-      "status": "race"
-    },
-    {
-      "time": 1.09,
-      "product_id": "P024",
-      "event": "actuator_pass",
-      "mode": "unsafe",
-      "status": "normal"
-    },
-    {
-      "time": 1.09,
-      "product_id": "P024",
-      "event": "race_condition_result_mapped_to_P030",
-      "mode": "unsafe",
-      "status": "race"
-    },
-    {
-      "time": 1.1,
-      "product_id": "P025",
-      "event": "actuator_pass",
-      "mode": "unsafe",
-      "status": "normal"
-    },
-    {
-      "time": 1.1,
+      "time": 515.92,
       "product_id": "P025",
       "event": "race_condition_result_mapped_to_P030",
       "mode": "unsafe",
       "status": "race"
     },
     {
-      "time": 1.11,
+      "time": 515.93,
+      "product_id": "P024",
+      "event": "actuator_pass",
+      "mode": "unsafe",
+      "status": "normal"
+    },
+    {
+      "time": 515.93,
       "product_id": "P026",
+      "event": "race_condition_result_mapped_to_P030",
+      "mode": "unsafe",
+      "status": "race"
+    },
+    {
+      "time": 515.93,
+      "product_id": "P025",
       "event": "actuator_reject",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 1.11,
+      "time": 515.94,
+      "product_id": "P027",
+      "event": "race_condition_result_mapped_to_P030",
+      "mode": "unsafe",
+      "status": "race"
+    },
+    {
+      "time": 515.94,
       "product_id": "P026",
-      "event": "race_condition_result_mapped_to_P030",
+      "event": "actuator_pass",
       "mode": "unsafe",
-      "status": "race"
+      "status": "normal"
     },
     {
-      "time": 1.12,
-      "product_id": "P027",
-      "event": "race_condition_result_mapped_to_P030",
-      "mode": "unsafe",
-      "status": "race"
-    },
-    {
-      "time": 1.12,
+      "time": 515.95,
       "product_id": "P027",
       "event": "actuator_pass",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 1.12,
+      "time": 515.95,
       "product_id": "P028",
       "event": "race_condition_result_mapped_to_P030",
       "mode": "unsafe",
       "status": "race"
     },
     {
-      "time": 1.13,
+      "time": 515.96,
       "product_id": "P028",
       "event": "actuator_pass",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 1.13,
+      "time": 515.97,
       "product_id": "P029",
       "event": "race_condition_result_mapped_to_P030",
       "mode": "unsafe",
       "status": "race"
     },
     {
-      "time": 1.14,
+      "time": 515.97,
       "product_id": "P029",
       "event": "actuator_pass",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 1.14,
+      "time": 515.98,
       "product_id": "P030",
       "event": "ai_result_mapped_correctly",
       "mode": "unsafe",
       "status": "normal"
     },
     {
-      "time": 1.14,
+      "time": 515.98,
       "product_id": "P030",
       "event": "actuator_pass",
       "mode": "unsafe",
